@@ -6,6 +6,15 @@ Third-party APIs allow developers to access their data and functionality by maki
 
 Use the [OpenWeather API](https://openweathermap.org/api) to retrieve weather data for cities. The documentation includes a section called "How to start" that provides basic setup and usage instructions. You will use `localStorage` to store any persistent data.
 
+Call current UV data
+
+http://api.openweathermap.org/data/2.5/uvi?lat={lat}&lon={lon}&appid={API key}
+
+Current and forecast weather data
+
+https://api.openweathermap.org/data/2.5/onecall?lat={lat}&lon={lon}&exclude={part}&appid={API key}
+
+
 ## User Story
 
 ```

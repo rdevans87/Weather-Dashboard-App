@@ -21,9 +21,15 @@ text-align: center;
 
 }
 
+h2 {
+text-align: center;
+color: black;
+
+}
+
 header {
  background-color: #093a6e;
- padding: 30px;
+ padding: 25px;
  color: white;
  position: relative;
 
@@ -42,7 +48,7 @@ background-color:  #093a6e;
         }
 
 form {
-padding-top: 50px;
+padding-top: 60px;
 
 }
 
@@ -61,8 +67,53 @@ button a:hover {
   background-color: rgb(87, 84, 84);
 }
 
+#backBtn {
+ float: right;
+
+}
+
+.forecast {
+    margin-left: 400px;
+    margin-top: 300px;
+    padding-right: 70px;
+     
+}
 
 
+.column {
+    float: right;
+    width: 25%;
+    padding: 0 10px;
+    padding-top: 80px;
+    
+  }
+  
+
+  
+  .row {margin: 0 -5px;}
+  
+
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
+  
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    text-align: center;
+    background-color:rgb(79, 132, 230);
+  }
 
 @media screen and (max-height: 450px) {
     .sidebar {padding-top: 15px;}
