@@ -5,7 +5,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather Dashboard</title>
-    <link rel="stylesheet" href="./assets/css/jass.css" />
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400&family=Merriweather:wght@700&display=swap"
         rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" 
@@ -15,31 +14,29 @@
 
 
 <body>
-    <header>
+    <header class="container-fluid">
         <h3>Weather Dashboard</h3>
-    </header>
-<div class="row">
-  <div class="left-column">
-    <h2></h2>
-     <h3>Search for a City</h3>
-        <form id="search-form">
-          <label class="form-label" for="search-form" placeholder="search"></label>
-          <input name="search-form" id="search" type="text" autofocus="true" class="form-input">
-          <button type="submit" class="btn">search</button>
+    </header>  
+     <div class="col-12 col-md-4 col-xl-3" id="sidebar">
+        <div class="row">
+            <form class="d-flex" id="weather-form">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-primary" type="submit">Search</button>
+              </form>
         </form>
+        <div>
         <ul class="list-group">
-            <li><button type="button" class="list-group-item list-group-item-action active" aria-current="true">
+            <button type="button" class="list-group-item list-group-item-action" aria-current="true">
               The current button
-            </button></li>
-            <li><button type="button" class="list-group-item list-group-item-action">A second item</button></li>
-            <li><button type="button" class="list-group-item list-group-item-action">A third button item</button></li>
-            <li><button type="button" class="list-group-item list-group-item-action">A fourth button item</button></li>
-            <li><button type="button" class="list-group-item list-group-item-action">A disabled button item</button></li>
+            </button>
+            <button type="button" class="list-group-item list-group-item-action">Atlanta</button>
+            <button type="button" class="list-group-item list-group-item-action">Chicago</button>
+            <button type="button" class="list-group-item list-group-item-action">New York</button>
+            <button type="button" class="list-group-item list-group-item-action">Los Angeles</button>
         </ul>
-  </div>
-  <div class="right-column">
-    <h2>Results:</h2>
-  </div>
+    </div>
+    </div>
+  
 
 
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"

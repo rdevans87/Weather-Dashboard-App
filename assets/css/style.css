@@ -5,49 +5,68 @@
   }
 
 body {
+
     font-family: Arial, Helvetica, sans-serif;
-    background-color: white;
+    background-color:rgb(212, 212, 212);
     flex-direction: column;
     min-height: 100vh;
     justify-content: flex-start;
+
   }
 
+h3 {
+
+font-size: 50px;
+text-align: center;
+
+}
 
 header {
- text-align: center;
- background-color: #2d3e50;
+ background-color: #093a6e;
  padding: 30px;
- font-size: 35px; 
  color: white;
+ position: relative;
+
+}
+
+#sidebar { 
+height: 100%;
+width: 300px;
+position: fixed;
+top: 0;
+left: 0;
+padding-top: 40px;
+padding-left: 20px;
+padding-right: 20px;
+background-color:  #093a6e;
+        }
+
+form {
+padding-top: 50px;
+
+}
+
+input, button {
+margin-bottom: 20px;
 
 }
 
 
-.left-column {
-  flex: 25%;
-  padding: 15px;
-  background-color: lightgray;
-  min-height: 100vh;
-  
-}
-
-.left h2 {
-  padding-right: 15px;
-
-}
-
-
-.right-column {
-  flex: 45%;
-  padding: 15px;
-  min-height: 100vh;
+button {
+background-color: lightblue;
+border: 1px solid black;
 }
 
 button a:hover {
-  background-color: #eee;
+  background-color: rgb(87, 84, 84);
 }
 
 
+
+
+@media screen and (max-height: 450px) {
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 18px;}
 
 
  
