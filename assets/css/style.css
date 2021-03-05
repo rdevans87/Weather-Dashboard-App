@@ -15,15 +15,14 @@ body {
   }
 
 h3 {
-
 font-size: 50px;
 text-align: center;
-
 }
 
 h2 {
-text-align: center;
+margin-left: 250px;
 color: black;
+padding-left: 60px;
 
 }
 
