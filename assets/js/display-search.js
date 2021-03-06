@@ -1,18 +1,22 @@
 var resultTextEl = document.querySelector('#result-text');
 var resultContentEl = document.querySelector('#result-content');
-var searchFormEl = document.querySelector('#search-form');
+var searchFormEl = document.querySelector('#waether-search-form');
 var responseText = document.getElementById('response-text');
 
 function getParams() {
 
+var searchParamsArr = document.location.search.split('&');
+
 searchApi(query, format);
+
+var query = searchParamsArr[0].split('=').pop();
+var format = searchParamsArr[1].split('=').pop()
 
 }
     
     
 
-var requestUrl = "https://api.openweathermap.org/data/2.5/onecall?lat={lat}&lon={lon}&appid={7c311763d4d62a265ed239e3d4ae2f45}"
-
+var requestUrl = 
 getApi(requestUrl) {
   fetch(requestUrl)
     .then(function (response) {
