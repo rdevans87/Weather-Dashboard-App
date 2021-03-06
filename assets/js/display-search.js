@@ -11,7 +11,7 @@ searchApi(query, format);
     
     
 
-var requestUrl = "https://api.openweathermap.org/data/2.5/onecall?lat={lat}&lon={lon}&appid={7c311763d4d62a265ed239e3d4ae2f45}"
+var requestUrl = 
 
 getApi(requestUrl) {
   fetch(requestUrl)
