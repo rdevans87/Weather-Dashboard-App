@@ -6,10 +6,10 @@
 
 body {
 
-    font-family: Arial, Helvetica, sans-serif;
-    background-color:rgb(212, 212, 212);
-    flex-direction: column;
-    min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color:rgb(212, 212, 212);
+  flex-direction: column;
+  min-height: 100vh;
     
   }
 
@@ -40,47 +40,56 @@ text-align: left;
 
 }
 
-.card {
+
+#forecast1, #forecast2, #forecast3, #forecast4, #forecast5 {
+  padding: 10px;
+  margin-right: 10px;
+  margin-left: 2px;
+  box-shadow: 0 4px 8px 0 black;
+  max-height: 25vh;
+  max-width: 25vh;
+ 
+
+}
+
+
+
+.card  {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  background-color: #f1f1f1;
   padding: 16px;
   border: 1px solid black;
   margin: 30px;
-  height: 50vh;
+  height: 40vh;
+  max-width: 200vh;
+  margin-right: 10px;
   
+
+
 }
+
+
 
 .column {
-  float: left;
-  width: 25%;
-  padding: 0 10px;
-}
-
-.row {margin: 0 -5px;}
-
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
+  width: 20%;
+  padding: 0;
+  margin-left: 0;
+  padding-left: 0;
 
 
-/* Style the counter cards */
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  padding: 16px;
-  text-align: center;
-  background-color: #f1f1f1;
 }
 
 
 #sidebar {
 float: left;
-min-height: 100vh;
-width: 300px;
+width: 250px;
 padding-left: 20px;
 padding-right: 20px;
 background-color:  #093a6e;
-margin-right: 20px;
+margin-right: 10px;
+padding-bottom: 10px;
+min-height: 90vh;
+
 
 }
 
@@ -102,30 +111,28 @@ border: 1px solid black;
 }
 
 button a:hover {
-  background-color: rgb(87, 84, 84);
+  background-color: rgb(51, 49, 49);
 }
 
 #backBtn {
- float: center;
- width: 260px;
+ float: left;
+ width: 210px;
  
-
 }
 
-
-.forecast {
-    margin-left: 400px;
-    margin-top: 300px;
-    padding-right: 70px;
-     
-}
 
   @media screen and (max-width: 600px) {
     .column {
       width: 100%;
-      display: block;
-      margin-bottom: 20px;
+
     }
+      .row:after {
+        content: "";
+       display: table;
+        clear: both;
+      
+      }
+
 
   }
     
@@ -135,6 +142,7 @@ button a:hover {
     max-width: 100%
     
     }
+
   }
 
   
@@ -167,8 +175,13 @@ button a:hover {
 
 }
 
-@media screen and (max-width: 600px) {
-  
+@media screen and (max-width: 300px) {
+  #backBtn {
+    visibility: hidden;
+   
+   
+}
+
 }
  
 

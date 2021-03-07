@@ -25,22 +25,22 @@
             <input class="form-control me-2" id="search-input" type="search" placeholder="City...">
             <button class="btn btn-primary" type="submit">Search</button>
         </form>
-        <ul class="list-group" id="list-group-item">
-            <button type="button" class="list-group-item list-group-item-action">Cleveland</button>
-            <button type="button" class="list-group-item list-group-item-action">Atlanta</button>
-            <button type="button" class="list-group-item list-group-item-action">Chicago</button>
-            <button type="button" class="list-group-item list-group-item-action">New York</button>
-            <button type="button" class="list-group-item list-group-item-action">Los Angeles</button>
-            <button type="button" class="list-group-item list-group-item-action">Denver</button>
-            <button type="button" class="list-group-item list-group-item-action">Chicago</button>
-            <button type="button" class="list-group-item list-group-item-action">Miami</button>
-            <button type="button" class="list-group-item list-group-item-action">Boston</button>
+        <ul class="list-group" id="list-group-items">
+            <button type="button" class="list-group-item">Columbus</button>
+            <button type="button" class="list-group-item">Cleveland</button>
+            <button type="button" class="list-group-item">Chicago</button>
+            <button type="button" class="list-group-item">New York</button>
+            <button type="button" class="list-group-item">Los Angeles</button>
+            <button type="button" class="list-group-item">Denver</button>
+            <button type="button" class="list-group-item">Chicago</button>
+            <button type="button" class="list-group-item">Miami</button>
+            <button type="button" class="list-group-item">Las Vegas</button>
         </ul>
         <a href="./index.html" class="btn btn-block btn-danger btn-lg" id="backBtn">&larr;Refresh.</a>
     </section>
 
     <section>
-        <h2>Displaying results for:</h2>
+        <h2><strong>Displaying results for:</strong></h2>
     </section>
     <main class="card card-rounded">
         <div>
@@ -52,48 +52,52 @@
                 <li>Wind Speed:</li>
                 <li>UV Index:</li>
             </ul>
-        </div> 
+        </div>
     </main>
     <section>
-    <h3>5-day Forecast:</h3>
-    <div id ="search-result-content"></div>
+    <h2><strong>5-day Forecast:</strong></h2>
+    </section>
+        <div id="forecastCards">
+    <span id="search-result-content"></span>
+        </div>
     <div class="row">
         <div class="column">
-            <div class="card" id=forecast1>
-                <h3>Date<span id=weather1></span></h3>
+            <div class="card" id="forecast1">
+                <h3>Date<span id="weather1"></span></h3>
                 <p>Temp:<span id=temp1></span></p>
                 <p>Humidity<span id="humidity1"></span></p>
             </div>
         </div>
         <div class="column">
-            <div class="card" id=forecast2>
-                <h3>Date<span id=weather2></span></h3>
-                <p>Temp:<span id=temp2></span></p>
-                <p>Humidity<span id="temp2"></span></p>
+            <div class="card" id="forecast2">
+                <h3>Date<span id="weather2"></span></h3>
+                <p>Temp:<span id="temp2"></span></p>
+                <p>Humidity<span id="humidity2"></span></p>
             </div>
         </div>
         <div class="column">
-            <div class="car" id=forcast3>
-                <h3>Date<span id=weather3></span></h3>
-                <p>Temp:<span id=temp3></span></p>
-                <p>Humidity<span id="temp3"></span></p>
+            <div class="card" id="forecast3">
+                <h3>Date<span id="weather3"></span></h3>
+                <p>Temp:<span id="temp3"></span></p>
+                <p>Humidity<span id="humidity3"></span></p>
             </div>
         </div>
         <div class="column">
-            <div class="card" id=forecast4>
-                <h3>Date<span id=weather4></span></h3>
-                <p>Temp:<span id=temp4></span></p>
-                <p>Humidity<span id="temp4"></span></p>
+            <div class="card" id="forecast4">
+                <h3>Date<span id="weather4"></span></h3>
+                <p>Temp:<span id="temp4"></span></p>
+                <p>Humidity<span id="humidity4"></span></p>
             </div>
         </div>
         <div class="column">
-            <div class="card" id=forecast5>
-                <h3>Date<span id=weather5></span></h3>
-                <p>Temp:<span id=temp5></span></p>
+            <div class="card" id="forecast5">
+                <h3>Date<span id="weather5"></span></h3>
+                <p>Temp:<span id="temp5"></span></p>
                 <p>Humidity<span id="temp5"></span></p>
             </div>
         </div>
-        </section>
+        </div>
+       
 
 
 
