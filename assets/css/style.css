@@ -1,4 +1,4 @@
-* {
+*{
     box-sizing: border-box;
     margin: 0;
     padding:0;
@@ -10,44 +10,65 @@ body {
     background-color:rgb(212, 212, 212);
     flex-direction: column;
     min-height: 100vh;
-    justify-content: flex-start;
-
+    
   }
 
-h3 {
-font-size: 50px;
+
+header {
+background-color: #093a6e;
 text-align: center;
+padding: 25px;
+color: white;
+
+}
+
+h1 {
+font-size: 50px;
+}
+
+main{
+color: black;
+
+
 }
 
 h2 {
-margin-left: 250px;
-color: black;
-padding-left: 60px;
+  margin-left: 250px;
+  color: black;
+  padding-left: 60px;
+  
+  }
+  
+
+ul {
+list-style-type: none;;
+padding-top: 10px;
 
 }
 
-header {
- background-color: #093a6e;
- padding: 25px;
- color: white;
- position: relative;
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  border: 1px solid black;
 
 }
 
-#sidebar { 
-height: 100%;
+
+#sidebar {
+float: left;
+min-height: 100vh;
 width: 300px;
-position: fixed;
-top: 0;
-left: 0;
-padding-top: 40px;
 padding-left: 20px;
 padding-right: 20px;
 background-color:  #093a6e;
-        }
+
+}
+
+
+
 
 form {
-padding-top: 60px;
+padding-top: 10px;
 
 }
 
@@ -78,45 +99,50 @@ button a:hover {
      
 }
 
-
-.column {
-    float: right;
-    width: 25%;
-    padding: 0 10px;
-    padding-top: 80px;
-    
-  }
-  
-
-  
-  .row {margin: 0 -5px;}
-  
-
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  
-
   @media screen and (max-width: 600px) {
-    .column {
-      width: 100%;
-      display: block;
-      margin-bottom: 20px;
+    
+
+  }
+    
+
+  @media screen and (max-width: 400px) {
+#sidebar {
+    max-width: 100%
+    
     }
   }
+
   
-  .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    padding: 16px;
-    text-align: center;
-    background-color:rgb(79, 132, 230);
+
+@media screen and (max-height: 400px) {
+    #sidebar {
+      padding-top: 15px;
+    }
+    
+}
+
+
+@media screen and (max-width: 480px) {
+
+  h1 {
+
+    font-size: 35px; 
+    
+    }
+
+}
+
+@media screen and (max-width: 340px) {
+
+  h1 {
+    
+    font-size: 25px
+        
   }
 
-@media screen and (max-height: 450px) {
-    .sidebar {padding-top: 15px;}
-    .sidebar a {font-size: 18px;}
+}
+
+    
 
 
  

@@ -15,15 +15,13 @@
 
 <body>
     <header class="container-fluid">
-        <h3>Weather Dashboard</h3>
+        <h1>Weather Dashboard</h1>
     </header>  
-     <section class="col-12 col-md-4 col-xl-3" id="sidebar">
-        <div class="row">
-            <form class="d-flex" id="weather-search-form">
-                <input class="form-control me-2" type="search" aria-label="Search">
-                <button class="btn btn-primary" type="submit">Search</button>
-              </form>
-        <div>
+     <section class=container id="sidebar">
+         <form class="d-flex" id="search-form">
+            <input class="form-control me-2" type="search" placeholder="City...">
+            <button class="btn btn-primary" type="submit">Search</button>
+        </form>
         <ul class="list-group">
             <button type="button" class="list-group-item list-group-item-action">Los Vegas</button>
             <button type="button" class="list-group-item list-group-item-action">Atlanta</button>
@@ -35,8 +33,31 @@
             <button type="button" class="list-group-item list-group-item-action">Miami</button>
             <button type="button" class="list-group-item list-group-item-action">Boston</button>
         </ul>
-    </div>
-    </section>
+        </section>
+        <section>
+            <h2>Displaying results for:</h2>
+        </section>
+            <main class="card card-rounded col-9">
+                <h2>City:</h2>
+              <div class="card-body p-3" id="conditions">
+                <ul>
+                    <li>Tempeture</li>
+                    <li>Humidty</li>
+                    <li>Wind Speed:</li>
+                    <li>UV Index:</li>
+                </ul>
+                <div id="result-content"></div><span id="result-text"></span>
+            </main>
+           
+         
+        
+
+
+    
+
+
+
+
     
 
 
