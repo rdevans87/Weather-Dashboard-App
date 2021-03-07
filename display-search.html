@@ -22,10 +22,10 @@
         </header>  
         <section class=container id="sidebar">
             <form class="d-flex" id="search-form">
-               <input class="form-control me-2" type="search" placeholder="City...">
+               <input class="form-control me-2" id="search-form" type="search" placeholder="City...">
                <button class="btn btn-primary" type="submit">Search</button>
            </form>
-           <ul class="list-group">
+           <ul class="list-group" id="city-list-group">
                <button type="button" class="list-group-item list-group-item-action">Cleveland</button>
                <button type="button" class="list-group-item list-group-item-action">Atlanta</button>
                <button type="button" class="list-group-item list-group-item-action">Chicago</button>
@@ -42,13 +42,12 @@
        <section>
         <h2>Displaying results for:</h2>
     </section>
-        <main class="card card-rounded" >
-            <span id="result-text"></span>
-            <div id="result-content"></div>
-            <h2>City:</h2>
+        <main class="card card-rounded">
+            <h2><span id="search-result-text">CITY</span></h2>
+            <span class="list-group" id="city-search-text"></span>
             <ul>
-                <li>Tempeture</li>
-                <li>Humidty</li>
+                <li>Tempeture:</li>
+                <li>Humidty:</li>
                 <li>Wind Speed:</li>
                 <li>UV Index:</li>
             </ul>     

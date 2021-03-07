@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    #config label,
+    #config input {
+      display: block;
+    }
+
+    #config,
+    #app {
+      display: none
+    }
+  </style>
+</head>
+
+<body>
+  <div id="config">
+    <form>
+      <h1>Initial Configuration</h1>
+      <div>
+        <label>Field1:</label>
+        <input data-property="field1" type="text" />
+      </div>
+      <div>
+        <label>Field2:</label>
+        <input data-property="field2" type="text" />
+      </div>
+      <div>
+        <label>Field2:</label>
+        <input data-property="field2" type="text" />
+      </div>
+      <div>
+        <label>Field3:</label>
+        <input data-property="field3" type="text" />
+      </div>
+      <div>
+        <label>Field4:</label>
+        <input data-property="field4" type="text" />
+      </div>
+    </form>
+    <button>Save</button>
+  </div>
+  <div id="app">
+    <h1>Hello
+      
+    </h1>
+  </div>
+  <script src="./maybe-prompt-for-config.js"></script>
+  <script>
+    maybePromptForConfig((config) => console.log(config));
+  </script>
+</body>
+
+</html>

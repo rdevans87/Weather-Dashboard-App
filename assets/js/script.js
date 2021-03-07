@@ -1,21 +1,23 @@
-var searchFormEl = document.querySelector('#weather-search-form');
+var citySearchFormEl = document.querySelector('#search-form');
 
 function handleSearchFormSubmit(event) {
 event.preventDefault();
 
-var searchInputVal = document.querySelector('#search-input').value;
-var formatInputVal = document.querySelector("#format-input").value;
+var citySearchInputVal = document.querySelector('#search-input').value;
+var cityInputVal = document.querySelector("#city-input").value;
 
-if (!searchInputVal) {
+if (!citySearchInputVal) {
 console.error('please enter a ciy');
 return;
 }
 
 var queryString = './search-results.html?q=' + searchInputVal + '&format=' + formatInputVal;
 
-  ocation.assign(queryString);
-}
+location.assign(queryString);
 
 
 searchFormEl.addEventListener('submit', handleSearchFormSubmit);
 
+
+
+api.openweathermap.org/data/2.5/weather?id=2172797&appid=

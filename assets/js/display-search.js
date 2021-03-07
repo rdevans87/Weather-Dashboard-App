@@ -1,6 +1,6 @@
 var resultTextEl = document.querySelector('#result-text');
 var resultContentEl = document.querySelector('#result-content');
-var searchFormEl = document.querySelector('#waether-search-form');
+var searchFormEl = document.querySelector('#search-form');
 var responseText = document.getElementById('response-text');
 
 function getParams() {
@@ -46,6 +46,9 @@ getApi(requestUrl) {
 }
 
 getApi(requestUrl);
+
+api.openweathermap.org/data/2.5/weather?q={cleveland}&appid={958129e0018a145e98089d823b31cabf}
+
 
 
 
