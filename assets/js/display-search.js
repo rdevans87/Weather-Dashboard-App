@@ -1,54 +1,35 @@
 var resultTextEl = document.querySelector('#result-text');
 var resultContentEl = document.querySelector('#result-content');
-var searchFormEl = document.querySelector('#search-form');
-var responseText = document.getElementById('response-text');
+var citySearchFormEl = document.querySelector('#search-form');
+var searchResultText = document.getElementById('#search-result-text');
+var cityListGroupEl=document.getElementbyId("#search-input")
 
-function getParams() {
+var repoList = document.querySelector('ul');
+var fetchButton = document.getElementById('fetch-button');
 
-var searchParamsArr = document.location.search.split('&')
+function getApionClick {
 
-searchApi(query, city);
-
-var query = searchParamsArr[0].split('=').pop();
-var city = searchParamsArr[1].split('=').pop()
-
-}
-
-function printResults(resultObj) {
-    console.log(resultObj);
-
-    var resultCard = document.createElement('div');
-  resultCard.classList.add('card', 'bg-light', 'text-dark', 'mb-3', 'p-3');
-
-  var resultBody = document.createElement('div');
-  resultBody.classList.add('card-body');
-  resultCard.append(resultBody);
-
-  var titleEl = document.createElement('h3');
-  titleEl.textContent = resultObj.title;
-
-  var bodyContentEl = document.createElement('p');
-  bodyContentEl.innerHTML =
-    '<strong>Date:</strong> ' + resultObj.date + '<br/>';
-    
-    
-
-var requestUrl = 
-getApi(requestUrl) {
+  var requestUrl = "api.openweathermap.org/data/2.5/weather?q=cleveland&appid={958129e0018a145e98089d823b31cabf";
+     
+ 
   fetch(requestUrl)
     .then(function (response) {
-      console.log(response);
-      if (response.status === 200) {
-        responseText.textContent = response.status;
-      }
       return response.json();
-  });
+    })
+    .then(function (data) {
+      for (var i = 0; i < data.length; i++) {
+        var listItem = document.createElement('li');
+        listItem.textContent = data[i].html_url;
+        repoList.appendChild(listItem);
+        console.log("this child was appended")
+      }
+    });
 }
 
+fetchButton.addEventListener('click', getApionClick);
+
 getApi(requestUrl);
-
-api.openweathermap.org/data/2.5/weather?q={cleveland}&appid={958129e0018a145e98089d823b31cabf}
-
+ 
 
 
 
