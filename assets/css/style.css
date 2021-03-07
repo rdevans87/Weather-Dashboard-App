@@ -87,7 +87,9 @@ button a:hover {
 }
 
 #backBtn {
- float: right;
+ float: center;
+ width: 260px;
+ 
 
 }
 

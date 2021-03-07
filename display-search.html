@@ -20,35 +20,43 @@
         <header class="container-fluid">
             <h3>Weather Dashboard</h3>
         </header>  
-         <section class="col-12 col-md-4 col-xl-3" id="sidebar">
-            <div class="row">
-                <form class="d-flex" id="weather-form">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-primary" type="submit">Search</button>
-                </form>
-            <div>
-            <ul class="list-group">
-                <button type="button" class="list-group-item list-group-item-action">Los Vegas</button>
-                <button type="button" class="list-group-item list-group-item-action">Atlanta</button>
-                <button type="button" class="list-group-item list-group-item-action">Chicago</button>
-                <button type="button" class="list-group-item list-group-item-action">New York</button>
-                <button type="button" class="list-group-item list-group-item-action">Los Angeles</button>
-                <button type="button" class="list-group-item list-group-item-action">Denver</button>
-                <button type="button" class="list-group-item list-group-item-action">Chicago</button>
-                <button type="button" class="list-group-item list-group-item-action">Miami</button>
-                <button type="button" class="list-group-item list-group-item-action">Boston</button>
-            </ul>
-        </div>
-      <a href="./index.html" class="btn btn-block btn-danger btn-lg" id="backBtn">&larr;Refresh.</a>
-    </div>
+        <section class=container id="sidebar">
+            <form class="d-flex" id="search-form">
+               <input class="form-control me-2" type="search" placeholder="City...">
+               <button class="btn btn-primary" type="submit">Search</button>
+           </form>
+           <ul class="list-group">
+               <button type="button" class="list-group-item list-group-item-action">Cleveland</button>
+               <button type="button" class="list-group-item list-group-item-action">Atlanta</button>
+               <button type="button" class="list-group-item list-group-item-action">Chicago</button>
+               <button type="button" class="list-group-item list-group-item-action">New York</button>
+               <button type="button" class="list-group-item list-group-item-action">Los Angeles</button>
+               <button type="button" class="list-group-item list-group-item-action">Denver</button>
+               <button type="button" class="list-group-item list-group-item-action">Chicago</button>
+               <button type="button" class="list-group-item list-group-item-action">Miami</button>
+               <button type="button" class="list-group-item list-group-item-action">Boston</button>
+           </ul>
+           <a href="./index.html" class="btn btn-block btn-danger btn-lg" id="backBtn">&larr;Refresh.</a>
+       </section>
+       
+       <section>
+        <h2>Displaying results for:</h2>
     </section>
-    <main>
-        <div>
-      <h2>Displaying results for: <span id="result-text"></span></h2>
-        </div>
-      <div id="result-content"></div>
-
+        <main class="card card-rounded" >
+            <span id="result-text"></span>
+            <div id="result-content"></div>
+            <h2>City:</h2>
+            <ul>
+                <li>Tempeture</li>
+                <li>Humidty</li>
+                <li>Wind Speed:</li>
+                <li>UV Index:</li>
+            </ul>     
         </main>
+      
+ 
+
+      
 
 
 
