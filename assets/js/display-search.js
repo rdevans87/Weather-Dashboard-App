@@ -5,7 +5,7 @@ var searchResultText = document.getElementById('#search-result-text');
 var citySearchInputVal = document.querySelector('#search-input')
 var resultsList = document.querySelector('#ul');
 var citySearchFormEl = document.getElementById("#search-form");
-var cityInputVal = document.querySelector("#city-input").
+var cityInputVal = document.querySelector("#city-input");
 
 
 function getParams() {
@@ -29,7 +29,8 @@ unction searchApi(query, format) {
     if (format) {
       locQueryUrl = 'ttps://openweathermap.org: + format + '/?fo=json'
     
-    }]
+    }
+
   
     locQueryUrl = locQueryUrl + '&q=' + query
     fetch(locQueryUrl)
