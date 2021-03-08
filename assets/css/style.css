@@ -23,7 +23,7 @@ color: white;
 }
 
 h1 {
-font-size: 50px;
+font-size: 70px;
 }
   
 
@@ -55,7 +55,7 @@ text-align: left;
 
 
 .card  {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px 0 black;
   background-color: #f1f1f1;
   padding: 16px;
   border: 1px solid black;
@@ -90,7 +90,6 @@ margin-right: 10px;
 padding-bottom: 10px;
 min-height: 90vh;
 
-
 }
 
 
@@ -124,15 +123,11 @@ button a:hover {
   @media screen and (max-width: 600px) {
     .column {
       width: 100%;
+      
 
     }
-      .row:after {
-        content: "";
-       display: table;
-        clear: both;
       
-      }
-
+    
 
   }
     
@@ -142,6 +137,7 @@ button a:hover {
     max-width: 100%
     
     }
+
 
   }
 
@@ -173,6 +169,22 @@ button a:hover {
         
   }
 
+}
+  
+  @media screen and (max-width: 360px) {
+  
+  #forecast1, #forecast2, #forecast3, #forecast4, #forecast5 {
+  
+    margin-left: 30px;
+  }
+    
+  .card {
+
+    margin: 10px;
+
+  }
+  
+  
 }
 
 @media screen and (max-width: 300px) {
