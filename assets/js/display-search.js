@@ -27,8 +27,7 @@ function printResults(resultObj) {
   
 function searchApi(query, city) {
     var locQueryUrl = 'api.openweathermap.org/data/2.5/weather?q=cityname&appid=958129e0018a145e98089d823b31cabf'
-    '
-  
+
     if (city) {
       locQueryUrl = 'https://openweathermap.org:" +  + "/?fo=json"';
     
