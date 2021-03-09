@@ -1,23 +1,18 @@
-var citySearchFormEl = document.querySelector('#search-form');
- 
+var searchFormEl = document.querySelector('#search-form')
 
-function handleSearchFormSubmit(event) {
-event.preventDefault();
+function getApi ()
 
-var citySearchInputVal = document.querySelector('#search-input').value;
+var requestURL = 'https://api.openweathermap.org/data/2.5/weather/
 
-
-if (!citySearchInputVal) {
-console.error('please enter a city');
-return;
-}
-
-var queryString = './search-results.html?q=' + citySearchInputVal;
-
-location.assign(queryString);
-console.log("this location is assigned to a query")
+fetch(requestUrl)
+.then(function (response) {
+  return response.json();
+})
+.then(function (data) {
+  console.log('Fetch Response \n-------------');
+  console.log(data);
+});
 
 
-}
 
-citySearchFormEl.addEventListener('submit', handleSearchFormSubmit);
+searchFormEl.addEventListener('submit', handleSearchFormSubmit);

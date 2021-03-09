@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!DOCTYPE html>
-<html lang="en">
-
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -23,7 +20,7 @@
     <section class=container id="sidebar">
         <form class="d-flex" id="search-form">
             <input class="form-control me-2" id="search-input" type="search" placeholder="City...">
-            <button class="btn btn-primary" type="submit">Search</button>
+            <button class="btn btn-primary" id="submitBtnEl" type="submit">Search</button>
         </form>
         <ul class="list-group" id="list-group-items">
             <button type="button" class="list-group-item">Columbus</button>
@@ -36,7 +33,7 @@
             <button type="button" class="list-group-item">Miami</button>
             <button type="button" class="list-group-item">Las Vegas</button>
         </ul>
-        <a href="./index.html" class="btn btn-block btn-danger btn-lg" id="backBtn">&larr;Refresh.</a>
+        <a href="index.html" class="btn btn-block btn-danger btn-lg" id="backBtn">&larr;Refresh.</a>
     </section>
 
     <section>
@@ -47,7 +44,7 @@
             <h2><span id="search-result-text">CITY:</span></h2>
             <span class="list-group" id="result-list-text"></span>
             <ul>
-                <li>Tempature:</li>
+                <li>Temperature:</li>
                 <li>Humidty:</li>
                 <li>Wind Speed:</li>
                 <li>UV Index:</li>

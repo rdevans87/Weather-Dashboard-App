@@ -4,10 +4,10 @@ var citySearchFormEl = document.querySelector('#search-form');
 var searchResultText = document.getElementById('#search-result-text');
 var citySearchInputVal = document.querySelector('#search-input')
 var resultsList = document.querySelector('#ul');
-var citySearchFormEl = document.getElementById("#search-form");
-var cityInputVal = document.querySelector("#city-input");
+var citySearchFormEl = document.getElementById("#search-form")
+var resultListtextEl = document.getElementById("#result-list-text")
 
-
+ 
 function getParams() {
     
     var searchParamsArr = document.location.search.split('&');
@@ -15,19 +15,22 @@ function getParams() {
     var query = searchParamsArr[0].split('=').pop();
     var format = searchParamsArr[1].split('=').pop();
   
-    searchApi(query, format);
+    searchApi(query, city);
   }
 
 function printResults(resultObj) {
     console.log(resultObj);
+    console.text("logging result in obj");
 
 }
+
   
-unction searchApi(query, format) {
-    var locQueryUrl = 'https://openweathermap.org/current'
+function searchApi(query, city) {
+    var locQueryUrl = 'api.openweathermap.org/data/2.5/weather?q=cityname&appid=958129e0018a145e98089d823b31cabf'
+    '
   
-    if (format) {
-      locQueryUrl = 'ttps://openweathermap.org: + format + '/?fo=json'
+    if (city) {
+      locQueryUrl = 'https://openweathermap.org:" +  + "/?fo=json"';
     
     }
 
@@ -61,3 +64,29 @@ unction searchApi(query, format) {
       console.error(error);
     });
 }
+
+function handleSearchFormSubmit(event) {
+  event.preventDefault();
+
+  var citySearchInputVal = document.querySelector('#search-input').value;
+  
+
+  if (!citySearchInputVal) {
+    console.error('You need to enter a city');
+    return;
+  }
+  
+  var queryString = './search-results.html?q=' + citySearchInputVal;
+    
+    location.assign(queryString);
+    console.log("this location is assigned to a query");
+
+  searchApi(citySearchInputVal);
+}
+
+citySearchFormEl.addEventListener('submit', handleSearchFormSubmit);
+
+getParams();
+
+
+

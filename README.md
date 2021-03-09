@@ -1,10 +1,16 @@
  ## 06 Server-Side APIs: Weather Dashboard
 
-## 
+## Coder Story
 
-Third-party APIs allow developers to access their data and functionality by making requests with specific parameters to a URL. Developers are often tasked with retrieving data from another application's API and using it in the context of their own. Your challenge is to build a weather dashboard that will run in the browser and feature dynamically updated HTML and CSS.
+This application features a weather dashboard that runs in the browser and was created using dynamically updated HTML and CSS with Javascript to access server-side APIs amd retrieve data which is saved in local storage and apppended through the DOM and displayed on my dashboard, which remained saved when the browser is refreshed.   by making requests with specific parameters to a URL. 
 
-Use the [OpenWeather API](https://openweathermap.org/api) to retrieve weather data for cities. The documentation includes a section called "How to start" that provides basic setup and usage instructions. You will use `localStorage` to store any persistent data.
+I used the [OpenWeather API](https://openweathermap.org/api) to retrieve weather data for cities. I used `localStorage` to store any persistent data such as commonly searched weather locations. 
+
+I'm still having difficulty learning Javascript specifically creating and appending elements throught the DOM. That is the major reason I've been struggling to get the last three assignment in on time. I really want to take my time and learn the correct way to process because it will save me more time as the become more difficult.  I spent a great deal off time working on the style and structure than 
+
+
+
+U The documentation includes a section called "How to start" that provides basic setup and usage instructions. 
 
 
 =======
