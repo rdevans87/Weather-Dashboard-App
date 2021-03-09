@@ -3,7 +3,8 @@ var fetchButton = document.getElementById('fetch-button');
 
 function getApi() {
  
-  var requestUrl = ("https://api.openweathermap.org/data/2.5/weather?q=cleveland&appid=43ad492565709c83ac85701e73c6ef38")
+  var requestUrl = ("https://api.openweathermap.org/data/2.5/onecall?lat={lat}&lon={lon}&exclude={part}&appid={API key}
+  )
 
 
   fetch(requestUrl)
@@ -33,3 +34,20 @@ function getApi() {
 fetchButton.addEventListener('click', getApi);
 
 
+var tableBody = document.getElementById('repo-table');
+var fetchButton = document.getElementById('fetch-button');
+
+function getApi() {
+  // fetch request gets a list of all the repos for the node.js organization
+  var requestUrl = 'https://api.github.com/orgs/openweathermap/repos';
+
+  fetch(requestUrl)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      console.log(data)
+      //Loop over the data to generate a table, each table row will have a link to the repo url
+      for (var i = 0; i < data.length; i++) {
+        // Creating elements, tablerow, tabledata, and anchor
+       
