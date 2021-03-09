@@ -1,8 +1,7 @@
-var searchFormEl = document.querySelector('#search-form')
 
-function getApi ()
+function getApi () {
 
-var requestURL = 'https://api.openweathermap.org/data/2.5/weather/
+var requestURL = 'https://api.openweathermap.org/data/2.5/weather'
 
 fetch(requestUrl)
 .then(function (response) {
@@ -13,6 +12,6 @@ fetch(requestUrl)
   console.log(data);
 });
 
+}
 
 
-searchFormEl.addEventListener('submit', handleSearchFormSubmit);

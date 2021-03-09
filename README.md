@@ -13,6 +13,11 @@ I'm still having difficulty learning Javascript specifically creating and append
 U The documentation includes a section called "How to start" that provides basic setup and usage instructions. 
 
 
+Cool Plug: 
+https://github.com/michael-lynch/open-weather
+
+
+
 =======
 
 ## User Story
