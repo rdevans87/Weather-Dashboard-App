@@ -1,91 +1,77 @@
-var resultTextEl = document.querySelector('#result-text');
-var resultContentEl = document.querySelector('#result-content');
-var citySearchFormEl = document.querySelector('#search-form');
-var searchResultText = document.getElementById('#search-result-text');
-var citySearchInputVal = document.querySelector('#search-input')
-var resultsList = document.querySelector('#ul');
-var citySearchFormEl = document.getElementById("#search-form")
-var resultListtextEl = document.getElementById("#result-list-text")
 
- 
 function getParams() {
-    
-    var searchParamsArr = document.location.search.split('&');
- 
-    var query = searchParamsArr[0].split('=').pop();
-    var format = searchParamsArr[1].split('=').pop();
-  
-    searchApi(query, city);
-  }
 
-function printResults(resultObj) {
-    console.log(resultObj);
-    console.text("logging result in obj");
+  var searchParamsArr = document.location.search.split("?");
 
+  var query = searchParamsArr[0].split('q').pop();
+  var format = searchParamsArr[1].split('=').pop();
+  v
+
+  searchApi (query, search);
 }
 
-  
-function searchApi(query, city) {
-    var locQueryUrl = 'api.openweathermap.org/data/2.5/weather?q=cityname&appid=958129e0018a145e98089d823b31cabf'
+ function appendCard(resultObj) {
+  console.log(resultObj);
 
-    if (city) {
-      locQueryUrl = 'https://openweathermap.org:" +  + "/?fo=json"';
-    
-    }
+  var resultCard = document.createElement('div');
+  resultCard.classList.add('card')
+  resultCard.append(h2);
+ 
+}  
+
 
   
-    locQueryUrl = locQueryUrl + '&q=' + query
+  var resultcard = document.createElement('p');
+  resultBody.classList.add('p');
+  resultCard.append(tempterature);
+
+  var humidityEl = document.createElement('p');
+    humidityEl.textContent = resultObj;
+
+  function searchApi(query, find) {
+    var locQueryUrl = "https://openweathermap.org/find?q=";
+
+      if (find) {
+    locQueryUrl = "https://openweathermap.org" + city/ + 
+      }
+
+    locQueryUrl = locQueryUrl + 'q=' + query
     fetch(locQueryUrl)
       .then(function (response) {
-        if (!response.ok) {
-          throw response.json();
-        }
-  
+        if (!response.ok) 
         return response.json();
       })
       .then(function (locRes) {
-
-        resultTextEl.textContent = locRes.search.query;
-
+      resultTextEl.textContent = locRes.search.query;
       console.log(locRes);
 
-      if (!locRes.results.length) {
-        console.log('No results found!');
-        resultContentEl.innerHTML = '<h3>No results found, search again!</h3>';
-      } else {
-        resultContentEl.textContent = '';
-        for (var i = 0; i < locRes.results.length; i++) {
-          printResults(locRes.results[i]);
-        }
       }
-    })
-    .catch(function (error) {
-      console.error(error);
-    });
+
+      function handleSearchFormSubmit(event) {
+      event.preventDefault();
+
+  var searchInputVal = document.querySelector('#search-input').value;
+  var searchInputVal = document.querySelector('#format-input').value;
+
 }
-
-function handleSearchFormSubmit(event) {
-  event.preventDefault();
-
-  var citySearchInputVal = document.querySelector('#search-input').value;
   
-
-  if (!citySearchInputVal) {
-    console.error('You need to enter a city');
+  if (!searchInputVal) {
+    console.error('You need a search input value');
     return;
+
   }
-  
-  var queryString = './search-results.html?q=' + citySearchInputVal;
-    
-    location.assign(queryString);
-    console.log("this location is assigned to a query");
+    var  queryString = './search-results.html?q=' + searchInputVal + '&appid= ' 
 
-  searchApi(citySearchInputVal);
-}
+      location.assign(queryString)
 
-citySearchFormEl.addEventListener('submit', handleSearchFormSubmit);
+       citySearchFormEl.addEventListener('submit', handleSearchFormSubmit);
 
-getParams();
+
+        window.replace("https://openweathermap.org/find?q=");
+
+
+        getParams()
+
 
 
 

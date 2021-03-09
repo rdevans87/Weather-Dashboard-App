@@ -4,21 +4,15 @@
 
 This application features a weather dashboard that runs in the browser and was created using dynamically updated HTML and CSS with Javascript to access server-side APIs amd retrieve data which is saved in local storage and apppended through the DOM and displayed on my dashboard, which remained saved when the browser is refreshed.   by making requests with specific parameters to a URL. 
 
-I used the [OpenWeather API](https://openweathermap.org/api) to retrieve weather data for cities. I used `localStorage` to store any persistent data such as commonly searched weather locations. 
+I used the [OpenWeather API](https://openweathermap.org/api) to retrieve weather data for cities. I used `localStorage` to store specific parameters of my search, which I attempted to append onto my own page. I used a fetch call to gather the search criteria with an API key provided by the site and stored the data in local storage.  
 
-I'm still having difficulty learning Javascript specifically creating and appending elements throught the DOM. That is the major reason I've been struggling to get the last three assignment in on time. I really want to take my time and learn the correct way to process because it will save me more time as the become more difficult.  I spent a great deal off time working on the style and structure than 
-
-
-
-U The documentation includes a section called "How to start" that provides basic setup and usage instructions. 
+METHOD USED, 
 
 
-Cool Plug: 
-https://github.com/michael-lynch/open-weather
+I'm still having difficulty learning Javascript specifically creating and appending elements throught the DOM. It takes me a lot of time to decision which functions t  really want to take my time and learn the correc it will save me more time as the become more difficult. I spent a great deal off time working on the style and structure rather than the functionality. 
 
 
-
-=======
+======
 
 ## User Story
 

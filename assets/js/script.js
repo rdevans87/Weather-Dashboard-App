@@ -1,23 +1,25 @@
+      var submitButtonEl = document.querySelector("submit-button");
+  
 
+    function handleFromSubmit(event) {
+      event.preventDefault();
 
-        var searchFormEl = document.querySelector('#search-form');
+      var citySearchInput = document.querySelector('#search-input');  
+      var searchFormInput = document.querySelector("#search-form")''
 
-function handleSearchFormSubmit(event) {
-  event.preventDefault();
+      location.assign(queryString)     
+    
+     var queryString = "https://openweathermap.org/find?q=" + citySearchInput; 
 
-  var searchInputVal = document.querySelector('#search-input').value;
-  var formatInputVal = document.querySelector('#format-input').value;
-
-  if (!searchInputVal) {
-    console.error('You need a search input value');
-    return;
+        if (!citySearchInputVal) {
+      console.text('Search for a city');
+      return;
   }
 
-
-var queryString = './search-results.html?q=' + searchInputVal + '&format=' + formatInputVal;
-
-location.assign(queryString);
-
+      window.location.replace = ("https://openweathermap.org/find?q=") 
+    
 }
 
-citySearchFormEl.addEventListener('submit', handleSearchFormSubmit);
+    submitButtonEl.addEventListener("submit-button", handleFormSubmit); 
+
+    
