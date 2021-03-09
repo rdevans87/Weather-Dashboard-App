@@ -4,22 +4,19 @@ function getParams() {
   var searchParamsArr = document.location.search.split("?");
 
   var query = searchParamsArr[0].split('q').pop();
-  var format = searchParamsArr[1].split('=').pop();
-  v
+  var request = searchParamsArr[1].split('=').pop();
+  var appid = searchParamsArr[1].split('=').pop();
 
-  searchApi (query, search);
+  searchApi(query) =  ("weather", "current", "humidity", "temperature", "forecast", "date", "windspeed")
+
 }
 
  function appendCard(resultObj) {
-  console.log(resultObj);
+  console.log(resultCard);
 
   var resultCard = document.createElement('div');
   resultCard.classList.add('card')
   resultCard.append(h2);
- 
-}  
-
-
   
   var resultcard = document.createElement('p');
   resultBody.classList.add('p');
@@ -47,27 +44,7 @@ function getParams() {
 
       }
 
-      function handleSearchFormSubmit(event) {
-      event.preventDefault();
-
-  var searchInputVal = document.querySelector('#search-input').value;
-  var searchInputVal = document.querySelector('#format-input').value;
-
-}
-  
-  if (!searchInputVal) {
-    console.error('You need a search input value');
-    return;
-
-  }
-    var  queryString = './search-results.html?q=' + searchInputVal + '&appid= ' 
-
-      location.assign(queryString)
-
-       citySearchFormEl.addEventListener('submit', handleSearchFormSubmit);
-
-
-        window.replace("https://openweathermap.org/find?q=");
+     
 
 
         getParams()

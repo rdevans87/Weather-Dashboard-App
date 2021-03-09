@@ -1,19 +1,7 @@
 var tableBody = document.getElementById('repo-table')
 var fetchButton = document.getElementById('fetch-button');
 
-function getApi() {
- 
-  var requestUrl = ("https://api.openweathermap.org/data/2.5/onecall?lat={lat}&lon={lon}&exclude={part}&appid={API key}
-  )
 
-
-  fetch(requestUrl)
-    .then(function (response) {
-      return response.json();
-    })
-    .then(function (data) {
-      console.log(data)
- 
       for (var i = 0; i < data.length; i++) {
       
         var createTableRow = document.createElement('tr');
