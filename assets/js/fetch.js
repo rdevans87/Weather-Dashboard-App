@@ -16,15 +16,12 @@ var fetchButton = document.getElementById('fetch-button');
         createTableRow.appendChild(tableData);
         tableBody.appendChild(createTableRow);
       }
-    });
-}
 
 fetchButton.addEventListener('click', getApi);
 
 
 var tableBody = document.getElementById('repo-table');
 var fetchButton = document.getElementById('fetch-button');
-
 
 
 

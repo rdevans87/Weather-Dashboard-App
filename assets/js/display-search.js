@@ -1,5 +1,11 @@
 
+
+
+
+
 function getParams() {
+
+
 
   var searchParamsArr = document.location.search.split("?");
 
@@ -7,9 +13,7 @@ function getParams() {
   var request = searchParamsArr[1].split('=').pop();
   var appid = searchParamsArr[1].split('=').pop();
 
-  searchApi(query) =  ("weather", "current", "humidity", "temperature", "forecast", "date", "windspeed")
-
-}
+a
 
  function appendCard(resultObj) {
   console.log(resultCard);
@@ -25,12 +29,14 @@ function getParams() {
   var humidityEl = document.createElement('p');
     humidityEl.textContent = resultObj;
 
-  function searchApi(query, find) {
+  
+  
+  
+    function searchApi(query, find) {
     var locQueryUrl = "https://openweathermap.org/find?q=";
 
       if (find) {
-    locQueryUrl = "https://openweathermap.org" + city/ + 
-      }
+    locQueryUrl = "https://openweathermap.org" + city   pageNumber
 
     locQueryUrl = locQueryUrl + 'q=' + query
     fetch(locQueryUrl)
@@ -42,13 +48,4 @@ function getParams() {
       resultTextEl.textContent = locRes.search.query;
       console.log(locRes);
 
-      }
-
-     
-
-
         getParams()
-
-
-
-
