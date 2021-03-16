@@ -1,41 +1,23 @@
-var tableBody = document.getElementById('repo-table')
+var cardEl = document.getElementById('r')
 var fetchButton = document.getElementById('fetch-button');
-
-
-      for (var i = 0; i < data.length; i++) {
-      
-        var createTableRow = document.createElement('tr');
-        var tableData = document.createElement('td');
-        var link = document.createElement('a');
-
-
-        link.textContent = data[i].html_url;
-        link.href = data[i].html_url;
-
-        tableData.appendChild(link);
-        createTableRow.appendChild(tableData);
-        tableBody.appendChild(createTableRow);
-      }
-
-fetchButton.addEventListener('click', getApi);
-
-
-var tableBody = document.getElementById('repo-table');
-var fetchButton = document.getElementById('fetch-button');
-
 
 
 function getApi() {
+  // replace `octocat` with anyone else's GitHub username
+  var requestUrl = 'http://api.openweathermap.org/data/2.5/weather?q=cleveland&appid=b0ff6d197a40a5f8e42c9a3871298d52';
 
-  var requestUrl = 'https://api.github.com/orgs/openweathermap/repos';
-
-fetch(requestUrl)
-  .then(function (response) {
+  fetch(requestUrl)
+    .then(function (response) {
       return response.json();
     })
     .then(function (data) {
-      console.log(data)
-      //Loop over the data to generate a table, each table row will have a link to the repo url
       for (var i = 0; i < data.length; i++) {
-        // Creating elements, tablerow, tabledata, and anchor
-       
+        var listItem = document.createElement('li');
+        listItem.textContent = data[i].html_url;
+        repoList.appendChild(listItem);
+      }
+    });
+}
+
+fetchButton.addEventListener('click', getApi);
+
