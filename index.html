@@ -18,7 +18,7 @@
     </header>
     <section class=container id="sidebar">
         <form class="d-flex" id="search-form">
-            <input class="form-control me-2" id="search-input" type="text" placeholder="City...">
+            <input class="form-control me-2" id="search-input" type=text value="city" placeholder="City...">
             <button class="btn btn-primary" id="search-button" type="submit">Search</button>
         </form>
         <ul class="list-group" id="saved-search-list">
@@ -32,6 +32,9 @@
             <button class="list-group-item"></button>
             <button class="list-group-item"></button>
         </ul>
+                <div id="list-group-log"></div>
+
+
     </section>
 
     <section>
@@ -57,35 +60,35 @@
     <div class="row">
         <div class="column">
             <div class="card" id="dayOne">
-                <h3>Date<span id=date1></span></h3>
+                <h3>Date<span id="date"></span></h3>
                 <p>Temp:<span id=temp1></span></p>
                 <p>UV Index:<span id="humidity"></span></p>
             </div>
         </div>
         <div class="column">
             <div class="card" id="dayTwo">
-                <h3>Date<span id="weather2"></span></h3>
+                <h3>Date<span id="date"></span></h3>
                 <p>Temp:<span id="temp2"></span></p>
                 <p>Humidity<span id="humidity2"></span></p>
             </div>
         </div>
         <div class="column">
             <div class="card" id="dayThree">
-                <h3>Date:<span id="weather3"></span></h3>
+                <h3>Date:<span id="date"></span></h3>
                 <p>Temp:<span id="temp3"></span></p>
                 <p>Humidity<span id="humidity3"></span></p>
             </div>
         </div>
         <div class="column">
             <div class="card" id="dayFour">
-                <h3>Date<span id="weather4"></span></h3>
+                <h3>Date<span id="date"></span></h3>
                 <p>Temp:<span id="temp4"></span></p>
                 <p>Humidity<span id="humidity4"></span></p>
             </div>
         </div>
         <div class="column">
-            <div class="card" id="dayFive">
-                <h3>Date<span id="weather5"></span></h3>
+            <div class="card" id="forecast5">
+                <h3>Date:<span id="date"></span></h3>
                 <p>Temp:<span id="temp5"></span></p>
                 <p>Humidity<span id="temp5"></span></p>
             </div>

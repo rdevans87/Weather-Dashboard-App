@@ -47,6 +47,12 @@ fetchButton.addEventListener('click', getApi);
 
 //     });
 
+  //     console.log("weather-temp").text
+  //         searchInPutVal 
+  //       got i = 0 <
+  //     $("list-group-item:first")
+  // }var logDiv = $( "#log" );
+ 
 // });
 
 
