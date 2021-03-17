@@ -55,7 +55,19 @@ fetchButton.addEventListener('click', getApi);
  
 // });
 
+//     $element.prop("onclick", null);
+// console.log("onclick property: ", $element[0].onclick);
 
+//     //   $("#search-input").each(function ( "li") {
+//     //     var elem = $(el);
+//     //     elem.val(elem.val() + "%");
+
+//   //   }); console.log(el, "")
+//     // localStorage.setItem.
+
+
+// ////////
+// 
 
 
 

@@ -4,8 +4,7 @@ $(document).ready(function () {
 
 var searchInputVal = $("search-input").val();
 
-cityInput = ("")
-
+cityInput = []
 
 appId = "aad15d31269bbce50f48533c38ae913d";
 
@@ -15,8 +14,7 @@ $.ajax({
     zipcode: 44319
   },
 
-  success: function (result) {
-
+  success:function(result) {
     $("#weather-temp").html("<strong>" + result + "</strong> degrees");
 
     for (var i = 0; i < 9; i++) {
@@ -27,28 +25,16 @@ $.ajax({
           "i = " + i
         ];
         logDiv.append(msgs.join(", ") + "<br>");
-      });
-    }
- });
+   });
+
+};
 
 $("search-form").submit(function (){ 
   console.log(input.val())  
 });
 
 $(".card").each(function(){
-
-
-
-})
-
-
-}
-
-val()) {
-  console.log(
-
-
-
+  
 //     $element.prop("onclick", null);
 // console.log("onclick property: ", $element[0].onclick);
 
@@ -60,4 +46,5 @@ val()) {
 //     // localStorage.setItem.
 
 
-
+// ////////
+// 

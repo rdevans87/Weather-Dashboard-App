@@ -51,9 +51,9 @@ function displayResults(resultObj) {
       resultTextEl.textContent = locRes.search.query;
       console.log(locRes);
     
-}
+});
 
-function handleSearchFormSubmit(event) {
+  function handleSearchFormSubmit(event) {
   event.preventDefault();
   
     var searchInputVal = document.querySelector('#search-input').value;
