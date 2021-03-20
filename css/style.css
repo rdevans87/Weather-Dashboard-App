@@ -9,6 +9,7 @@ font-family: Arial, Helvetica, sans-serif;
 background-color:rgb(212, 212, 212);
 flex-direction: column;
 min-height: 100vh; 
+min-width: 100vh;
 }
 
 
@@ -47,7 +48,7 @@ text-align: left;
   padding: 25px;
   border: 1px solid black;
   min-height: 45vh;
-  margin-right: 30px;
+  margin-right: 10px;
   margin-bottom: 10px;
   margin-left: 30px;
   overflow-block: column;
@@ -56,21 +57,74 @@ text-align: left;
 
 
 .box {
-float: right;
+flex-direction: column;
+float: left;
  padding-top: 10px;
  box-shadow: 0 4px 8px 0 black;
  border: 1px solid black;
  min-height: 25vh;
  min-width: 23vh;
- margin-right: 50px;
  border-radius: 5px;
  margin-bottom: 5px;
  padding-left: 10px;
+ margin-left: 20px;
  background-color: #f1f1f1;
- max-width: 100vh;
-
 
 }
+
+.box2:first-child{
+  flex-direction: column;
+  display: inline-flex;
+  padding-top: 10px;
+  box-shadow: 0 4px 8px 0 black;
+  border: 1px solid black;
+  min-height: 25vh;
+  min-width: 23vh;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  padding-left: 10px;
+  margin-left: 20px;
+  background-color: #f1f1f1;
+  
+
+} 
+
+.box3{
+  flex-direction: column;
+  padding-top: 10px;
+  box-shadow: 0 4px 8px 0 black;
+  border: 1px solid black;
+  min-height: 25vh;
+  min-width: 23vh;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  padding-left: 10px;
+  margin-left: 20px;
+  background-color: #f1f1f1;
+  
+
+
+} 
+
+.box4{
+
+  flex-direction: column;;
+  flex-wrap: wrap;
+  padding-top: 10px;
+  box-shadow: 0 4px 8px 0 black;
+  border: 1px solid black;
+  min-height: 25vh;
+  min-width: 23vh;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  padding-left: 10px;
+  margin-left: 20px;
+  background-color: #f1f1f1;
+  
+ 
+
+}
+
 
 
 
@@ -88,6 +142,7 @@ padding-right: 20px;
 background-color:  #093a6e;
 margin-right: 20px;
 min-height: 80vh;
+padding-bottom: 30px;
 
 }
 
@@ -117,32 +172,26 @@ button a:hover {
  width: 210px;
  
 }
+      
 
-@media screen and (max-width: 1500px) {
-
+@media screen and (max-width: 1000px) {
+    .row{
+   
     }
-      
-  }
+  }  
 
-
-  @media screen and (max-width: 600px) {
-  .box {
-      flex-direction: row;
-      
-    }
-      
-  }
-    
 
   @media screen and (min-width: 400px) {
 #sidebar {
-    max-width: 100%
+    max-width: 100%;
+  
     
-    }
+  
+  
+  }
 
 
   }
-
   
 
 @media screen and (max-height: 400px) {
@@ -179,7 +228,6 @@ button a:hover {
 
 }
   
-
 @media screen and (max-width: 300px) {
   #backBtn {
     visibility: hidden;
@@ -188,8 +236,3 @@ button a:hover {
 
 }
 
-
- 
-
-
- 
