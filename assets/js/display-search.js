@@ -5,19 +5,19 @@ function getParams() {
 
   var searchParamsArr = document.location.search.split('&');
   var query = searchParamsArr[0].split('=').pop();
-  
-    getWeather(query);
+
+  getWeather(query);
 
 }
 
 function DisplayWeatherResults(resultObj) {
-  console.log(resultObj
+  console.log(resultObj);
   
-    var Listenitem
+
+}
+    var cityNameText = document.createElement("h2");
+    cityNameText.textContent("CITY:") 
     
-
-
-
 
 function getWeather(query) {
 
@@ -29,6 +29,7 @@ function getWeather(query) {
   }
 
   locQueryUrl = locQueryUrl + '&q=' + query;
+    
     fetch(locQueryUrl)
     .then(function (response) {
       if (!response.ok) {
@@ -55,7 +56,7 @@ function getWeather(query) {
     .catch(function (error) {
       console.error(error);
     });
-}
+  }
 
 function findCityOnSubmit(event) {
   event.preventDefault();
