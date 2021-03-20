@@ -1,76 +1,69 @@
-var submitBtnEl = document.querySelector("#submitBtnEl")
-var ListGroupUl= document.getElementById("list-group")
-var resultListtext = document.querySelector("#result-list-text")
-var forecastOneEl = document.querySelector ("#forecast1")
-var forecastTwoEl = document.querySelector("#forecast2")
-var  forecastThreeEl = document.querySelector ("#forecast3")
-var forecastFourEl = document.querySelector ("#forecast4")
-var forecastFiveEl = document.querySelector ("#forecast5")
-
-forecastOneEl = document.querySelector ()
+var resultContentEl = document.querySelector('#result-content');
+var searchFormEl = document.querySelector('#search-form');
 
 function getParams() {
 
-  var searchParamsArr = document.location.search.split("?");
+  var searchParamsArr = document.location.search.split('&');
+  var query = searchParamsArr[0].split('=').pop();
+  
+    getWeather(query);
 
-  var query = searchParamsArr[0].split('q').pop();
-  var object = searchParamsArr[1].split('=').pop();
-
-  searchApi(query, object);
 }
-function displayResults(resultObj) {
-  console.log(resultobj);
 
-  var resultCard = document.createElement('h2');
-  resultCard.classList.add('card')
-  resultCard.append(h2);
-  
-  var resultCard = document.createElement('p');
-  resultBody.classList.add('p');
-  resultCard.append(tempterature);
+function getWeather(query) {
 
-  var humidityEl = document.createElement('p');
-    humidityEl.textContent = resultObj;
+  var locQueryUrl = "https://api.openweathermap.org/find?q=&appid=";
 
-  
-    function searchApi(query, searchIn) {
-    var locQueryUrl = "https://wwww.api.openweathermap.org/find?q=&appid=";
-    if (searchInputVal) {
-    locQueryUrl = "https://api.openweathermap.org/" + "data/2.5/weather?q=" + searchInputVal + "&appid=" + appIdVal;  
+  if (cityInputVal) {
+    locQueryUrl = "https://api.openweathermap.org/" + "data/2.5/forecast?q=" + cityInputVal + "&appid=" + "097dc737a3f579f2c4a7d1902160dc4e";
 
-    }
-    
-    locQueryUrl = locQueryUrl + '?q=' + query
+  }
+
+  locQueryUrl = locQueryUrl + '&q=' + query;
     fetch(locQueryUrl)
-      .then(function (response) {
-        if (!response.ok) 
-        return response.json();
-      })
-      .then(function (locRes) {
+    .then(function (response) {
+      if (!response.ok) {
+        throw response.json();
+      }
+      return response.json();
+    })
+    .then(function (locRes) {
+
       resultTextEl.textContent = locRes.search.query;
+
       console.log(locRes);
-    
-});
 
-  function handleSearchFormSubmit(event) {
+      if (!locRes.results.length) {
+        console.log('No results found!');
+        resultContentEl.innerHTML = '<h3>No results found, search again!</h3>';
+      } else {
+        resultContentEl.textContent = '';
+        for (var i = 0; i < locRes.results.length; i++) {
+          printResults(locRes.results[i]);
+        }
+      }
+    })
+    .catch(function (error) {
+      console.error(error);
+    });
+}
+
+function findCityOnSubmit(event) {
   event.preventDefault();
-  
-    var searchInputVal = document.querySelector('#search-input').value;
-    var appIdVal = document.querySelector('#search-result-text').value;
-  
-      if (!searchInputVal) {
-      console.log("searchInputVal")
-          return;
-      } else { 
-      console.error('You need a search input value');
-     }
-      
-var queryString = "./data/2.5/weather?q=" + searchInputVal + "&appid=" + appIdVal
-  
- location.assign(queryString);
 
-  searchFormEl.addEventListener('submit', handleSearchFormSubmit);
+  var cityInputVal = document.querySelector('#cityInputVal').value;
+  var searchResultText = document.querySelector('#search-result-text').value;
 
-    
-    <input type="text" id="q" name="q" placeholder="Weather in your city"></input>
+  if (cityInputVal) {
+    console.log(searchResultText)
+  } else {
+    console.error('You need a search input value');
+  }
 
+  getWeather(cityInputVal, searchResultText)
+}
+  
+
+ searchFormEl.addEventListener('submit', findCityOnSubmit);
+  
+getParams();    
