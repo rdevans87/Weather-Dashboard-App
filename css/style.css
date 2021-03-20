@@ -39,36 +39,39 @@ text-align: left;
 
 }
 
-  .box {
-   float: left;
-  padding-top: 10px;
-  margin-right: 10px;
-  box-shadow: 0 4px 8px 0 black;
-  border: 1px solid black;
-  min-height: 28vh;
-  min-width: 23vh;
-  margin-left: 10px;
-  border-radius: 5px;
-  margin-bottom: 20px;
-  padding-left: 10px;
-  background-color: #f1f1f1;
-
-
-}
-
+ 
 .card {
-  box-shadow: 0 4px 8px 0 black;
-  flex-direction: left;
+  box-shadow: 0 4px 8px 0 black;;
+  flex-wrap: wrap;; 
   background-color: #f1f1f1;
   padding: 25px;
   border: 1px solid black;
-  min-height: 40vh;
-  margin-right: 20px;
+  min-height: 45vh;
+  margin-right: 30px;
   margin-bottom: 10px;
+  margin-left: 30px;
   overflow-block: column;
+  max-width: 110vh;
+}
+
+
+.box {
+float: right;
+ padding-top: 10px;
+ box-shadow: 0 4px 8px 0 black;
+ border: 1px solid black;
+ min-height: 25vh;
+ min-width: 23vh;
+ margin-right: 50px;
+ border-radius: 5px;
+ margin-bottom: 5px;
+ padding-left: 10px;
+ background-color: #f1f1f1;
+ max-width: 100vh;
 
 
 }
+
 
 
 .column {
@@ -79,12 +82,11 @@ text-align: left;
 
 #sidebar {
 float: left;
-width: 250px;
+width: 240px;
 padding-left: 20px;
 padding-right: 20px;
 background-color:  #093a6e;
-margin-right: 10px;
-padding-bottom:80px;
+margin-right: 20px;
 min-height: 80vh;
 
 }
@@ -116,9 +118,15 @@ button a:hover {
  
 }
 
+@media screen and (max-width: 1500px) {
+
+    }
+      
+  }
+
 
   @media screen and (max-width: 600px) {
-  .flex-box {
+  .box {
       flex-direction: row;
       
     }

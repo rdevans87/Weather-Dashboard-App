@@ -18,7 +18,6 @@ function getParams() {
 
   searchApi(query, object);
 }
-
 function displayResults(resultObj) {
   console.log(resultobj);
 
@@ -66,15 +65,74 @@ function displayResults(resultObj) {
       console.error('You need a search input value');
      }
       
-    var queryString = "./data/2.5/weather?q=" + searchInputVal + "&appid=" + appIdVal
+var queryString = "./data/2.5/weather?q=" + searchInputVal + "&appid=" + appIdVal
   
-  
-    location.assign(queryString);
-  
-  }
+ location.assign(queryString);
+
+  searchFormEl.addEventListener('submit', handleSearchFormSubmit);
+
     
-    searchFormEl.addEventListener('submit', handleSearchFormSubmit);
-  
+    <input type="text" id="q" name="q" placeholder="Weather in your city"></input>
   
  getParams(); 
+<div class="col-sm-12" web-data-spector="wnode_spector_61">
+              <form class="form-inline text-center first-child" onsubmit="FindCity(); return false" role="form" id="searchform" action="#" method="get" web-data-spector="wnode_spector_62">
+                <div class="form-group" web-data-spector="wnode_spector_63">
+                  <label class="sr-only" for="help-search" web-data-spector="wnode_spector_64">Search</label>
+                  
+                  <input class="form-control border-color col-sm-12" id="search_str" name="q" value="cleveland" onfocus="this.value = (this.value=='London, UK')? '' : this.value;" web-data-spector="wnode_spector_65">
+                    
+                </div>
+                <button type="submit" class="btn btn-color" web-data-spector="wnode_spector_66"><i class="fa fa-question-circle" web-data-spector="wnode_spector_67"></i> Search</button>
+              </form>
+            </div>
+ <form class="form-inline text-center first-child" onsubmit="FindCity(); return false" role="form" id="searchform" action="#" method="get" web-data-spector="wnode_spector_62">
+                <div class="form-group" web-data-spector="wnode_spector_63">
+                  <label class="sr-only" for="help-search" web-data-spector="wnode_spector_64">Search</label>
+                  
+                  <input class="form-control border-color col-sm-12" id="search_str" name="q" value="cleveland" onfocus="this.value = (this.value=='London, UK')? '' : this.value;" web-data-spector="wnode_spector_65">
+                    
+                </div>
+                <button type="submit" class="btn btn-color" web-data-spector="wnode_spector_66"><i class="fa fa-question-circle" web-data-spector="wnode_spector_67"></i> Search</button>
+              </form>
+
+ <input data-v-7bcb5258="" type="text" placeholder="Search city" class=""></input>
+
+
+ <form class="form-inline text-center first-child" onsubmit="FindCity(); return false" role="form" id="searchform" action="#" method="get" web-data-spector="wnode_spector_62">
+                <div class="form-group" web-data-spector="wnode_spector_63">
+                  <label class="sr-only" for="help-search" web-data-spector="wnode_spector_64">Search</label    
+                  <input class="form-control border-color col-sm-12" id="search_str" name="q" value="cleveland" onfocus="this.value = (this.value=='London, UK')? '' : this.value;" web-data-spector="wnode_spector_65">
+                    
+                </div>
+                <button type="submit" class="btn btn-color" web-data-spector="wnode_spector_66"><i class="fa fa-question-circle" web-data-spector="wnode_spector_67"></i> Search</button>
+              </form>
+ Not found. To make search more precise put the city's name, comma, 2-letter country code (ISO3166).
+<button data-v-7bcb5258="" type="submit" class="button-round dark">Search</button>
+    document.querySelector("#weather-widget > div.grey-container > div > div > div.search-block > div.search > div")
+ function getCookie(name) {
+  const value = `; ${document.cookie}`;
+  const parts = value.split(`; ${name}=`);
+  if (parts.length === 2) return parts.pop().split(';').shift();
+
+  document.querySelector("#weather-widget > div.grey-container > div > div > div.search-block > div.search > div")
+}document.querySelector("#weather-widget > div.grey-container > div > div > div.search-block > div.search > div")
+
+function setCookie (name, value) {
+    var expires = new Date()
+    expires.setTime(expires.getTime() + (5 * 1000 * 60 * 60 * 24))
+    document.cookie = name + '=' + escape(value) + '; expires=' + expires.toGMTString() + '; path=/'
+  }
   
+function bannerClose() {
+    document.getElementById("banner_android").style.display = "none";
+    setCookie("owm_banner_android_closed", true)
+}
+
+document.onload = function() {
+   if ((document.cookie.indexOf("owm_banner_android_closed") === -1)  && /Android/i.test(window.navigator.userAgent)) {
+       document.getElementById("banner_android").style.display = 'flex';
+    } 
+}()
+
+

@@ -2,14 +2,12 @@
 
 ## Coder Story
 
-This application features a weather dashboard that runs in the browser and was created using dynamically updated HTML and CSS with Javascript to access server-side APIs amd retrieve data which is saved in local storage and apppended through the DOM and displayed on my dashboard, which remained saved when the browser is refreshed.   by making requests with specific parameters to a URL. 
+This application features a weather dashboard that runs in the browser and was created using dynamically updated HTML and CSS with Javascript to access server-side APIs and retrieve data which is saved in local storage and apppended through the DOM and displayed on my dashboard, which remains saved when the browser is refreshed.
 
 I used the [OpenWeather API](https://openweathermap.org/api) to retrieve weather data for cities. I used `localStorage` to store specific parameters of my search, which I attempted to append onto my own page. I used a fetch call to gather the search criteria with an API key provided by the site and stored the data in local storage.  
 
-METHOD USED, 
+METHOD USED: 
 
-
-I'm still having difficulty learning Javascript specifically creating and appending elements throught the DOM. It takes me a lot of time to decision which functions t  really want to take my time and learn the correc it will save me more time as the become more difficult. I spent a great deal off time working on the style and structure rather than the functionality. 
 
 
 ======
@@ -42,57 +40,18 @@ THEN I am again presented with current and future conditions for that city
 
 The following image shows the web application's appearance and functionality:
 
-![The weather app includes a search option, a list of cities, and a five-day forecast and current weather conditions for Atlanta.](./Assets/06-server-side-apis-homework-demo.png)
+
 
 ## Grading Requirements
 
-This homework is graded based on the following criteria: 
-
 ### Technical Acceptance Criteria: 40%
-
-* Satisfies all of the above acceptance criteria plus the following:
-
-    * Uses the OpenWeather API to retrieve weather data.
-
-    * Uses `localStorage` to store persistent data.
 
 ### Deployment: 32%
 
-* Application deployed at live URL.
-
-* Application loads with no errors.
-
-* Application GitHub URL submitted.
-
-* GitHub repository that contains application code.
-
 ### Application Quality: 15%
-
-* Application user experience is intuitive and easy to navigate.
-
-* Application user interface style is clean and polished.
-
-* Application resembles the mock-up functionality provided in the homework instructions.
 
 ### Repository Quality: 13%
 
-* Repository has a unique name.
-
-* Repository follows best practices for file structure and naming conventions.
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages.
-
-* Repository contains quality readme file with description, screenshot, and link to deployed application.
-
 ## Review
 
-You are required to submit BOTH of the following for review:
 
-* The URL of the functional, deployed application.
-
-* The URL of the GitHub repository. Give the repository a unique name and include a readme describing the project.
-
-- - -
-© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

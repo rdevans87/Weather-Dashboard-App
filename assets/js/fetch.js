@@ -3,7 +3,6 @@ var fetchButton = document.getElementById('fetch-button');
 
 
 function getApi() {
-  // replace `octocat` with anyone else's GitHub username
   var requestUrl = 'http://api.openweathermap.org/data/2.5/weather?q=cleveland&appid=b0ff6d197a40a5f8e42c9a3871298d52';
 
   fetch(requestUrl)
@@ -71,3 +70,20 @@ fetchButton.addEventListener('click', getApi);
 
 
 
+
+
+        // $(".card").each(function(){
+// }
+  
+//     $element.prop("onclick", null);
+// console.log("onclick property: ", $element[0].onclick);
+
+//     //   $("#search-input").each(function ( "li") {
+//     //     var elem = $(el);
+//     //     elem.val(elem.val() + "%");
+
+//   //   }); console.log(el, "")
+//     // localStorage.setItem.
+
+
+// ////////

@@ -1,50 +1,41 @@
 $(document).ready(function () {
   console.log("ready!");
-})
-
-var searchInputVal = $("search-input").val();
-
-cityInput = []
-
-appId = "aad15d31269bbce50f48533c38ae913d";
-
-$.ajax({
-  url: "https://api.openweathermap.org/data/2.5/forecast?q=" + CityInputVal + "&appid=" + appId,
-  data: {
-    zipcode: 44319
-  },
-
-  success:function(result) {
-    $("#weather-temp").html("<strong>" + result + "</strong> degrees");
-
-    for (var i = 0; i < 9; i++) {
-      $("list-group-item").eq(i).on("click", {value: i}, function (event) {
-        var msgs = [
-          "button = " + $(this).index(),
-          "event.data.value = " + event.data.value,
-          "i = " + i
-        ];
-        logDiv.append(msgs.join(", ") + "<br>");
-   });
-
-};
-
-$("search-form").submit(function (){ 
-  console.log(input.val())  
 });
 
-$(".card").each(function(){
+var cityInputVal = [];
+
+fetch("http://api.openweathermap.org/data/2.5/forecast??q=" + CityInput + "&appid=74a15e51334b346d7b36d2511a654776b0ff6d197a40a5f8e42c9a3871298d52")
+
+var getOpenWeatherApi = {method: 'GET'};
+fetch(
+
+  .then(response => console.log(response))
+  .catch(err => console.error(err));
+
+var searchFormEl = $("#search-input").val()
+
+appIdKey = "aad15d31269bbce50f48533c38ae913d";
+
+  $.ajax({
+ url: "https://api.openweathermap.org/data/2.5/forecast?q=" + CityInputVal + "&appid=" + appIdKey,
+data: {
+ var 
+ 
+
+          
   
-//     $element.prop("onclick", null);
-// console.log("onclick property: ", $element[0].onclick);
+  span {
+    color: red;
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+</head>
+<body>
+"https://api.openweathermap.org/data/  2.5/forecast?q=cleveland&appid=b0ff6d197a40a5f8e42c9a3871298d52
+Reversed - <span></span>
+ 
+<div>One</div>
+<div>Two</div>
+<div>Three</div>
+ 
 
-//     //   $("#search-input").each(function ( "li") {
-//     //     var elem = $(el);
-//     //     elem.val(elem.val() + "%");
-
-//   //   }); console.log(el, "")
-//     // localStorage.setItem.
-
-
-// ////////
-// 
