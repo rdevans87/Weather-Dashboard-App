@@ -10,6 +10,15 @@ function getParams() {
 
 }
 
+function DisplayWeatherResults(resultObj) {
+  console.log(resultObj
+  
+    var Listenitem
+    
+
+
+
+
 function getWeather(query) {
 
   var locQueryUrl = "https://api.openweathermap.org/find?q=&appid=";
