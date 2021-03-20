@@ -3,7 +3,7 @@ var fetchButton = document.getElementById('fetch-button');
 
 
 function getApi() {
-  var requestUrl = 'http://api.openweathermap.org/data/2.5/weather?q=cleveland&appid=b0ff6d197a40a5f8e42c9a3871298d52';
+  var requestUrl = 'http://api.openweathermap.org/data/2.5/weather?q=cleveland&appid=';
 
   fetch(requestUrl)
     .then(function (response) {
