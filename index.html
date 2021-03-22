@@ -18,7 +18,7 @@
     </header>
     <section class=container id="sidebar">
         <form class="d-flex" id="search-form">
-            <input class="form-control me-2" id=cityInputVal name="city" type=text value="city" placeholder="Weather in your City...">
+            <input class="form-control me-2" id="city-input" name="city" type=text value="city" placeholder="Weather in your City...">
             <button class="btn btn-primary" id="search-button" type="submit">Search</button>
         </form>
         <ul class="list-group" id="saved-search-list">
@@ -38,6 +38,7 @@
         <h2><strong>Displaying results for:</strong></h2>
     </section>
     <main class="card card-rounded">
+        <span class="city-weather-results"></span>
         <div>
             <h2><span id="city-name-text">CITY:</span></h2>
             <ul class="list-group" id="current-list-group">

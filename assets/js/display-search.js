@@ -3,33 +3,37 @@ var searchFormEl = document.querySelector('#search-form');
 
 function getParams() {
 
-  var searchParamsArr = document.location.search.split('&');
-  var query = searchParamsArr[0].split('=').pop();
+var searchParamsArr = document.location.search.split('&');
+var query = searchParamsArr[0].split('=').pop();
+vart  = searchParamsArr[1].split('=').pop();
 
-  getWeather(query);
+  getCityWeather(query);
 
 }
+function displayWeatherResults(resultObj) {
+ console.log(resultObj);
+    
+}
+//  weatherElement.innerHTML= '<img src="assets/images/weatherAppimgSml.png"/>'
 
-function DisplayWeatherResults(resultObj) {
-  console.log(resultObj);
+//  var cityNameText = document.createElement("div");
+//  cityNameText.textContent = "This is some weather data";
+
+// }
+
+function getCityWeather(query) {
+
+  var locQueryUrl = "https://api.openweathermap.orgdata/2.5/forecast?q=&appid="
   
+  var appidKey = "097dc737a3f579f2c4a7d1902160dc4e"
 
-}
-    var cityNameText = document.createElement("h2");
-    cityNameText.textContent("CITY:") 
-    
+  if (cityInput) {
+    locQueryUrl = "https://api.openweathermap.org/data/2.5/forecast?q=" + cityInputVal + "&appid=" + appidKey ;
 
-function getWeather(query) {
+  } 
 
-  var locQueryUrl = "https://api.openweathermap.org/find?q=&appid=";
 
-  if (cityInputVal) {
-    locQueryUrl = "https://api.openweathermap.org/" + "data/2.5/forecast?q=" + cityInputVal + "&appid=" + "097dc737a3f579f2c4a7d1902160dc4e";
-
-  }
-
-  locQueryUrl = locQueryUrl + '&q=' + query;
-    
+  locQueryUrl = locQueryUrl + '&q=' + query ;
     fetch(locQueryUrl)
     .then(function (response) {
       if (!response.ok) {
@@ -49,31 +53,32 @@ function getWeather(query) {
       } else {
         resultContentEl.textContent = '';
         for (var i = 0; i < locRes.results.length; i++) {
-          printResults(locRes.results[i]);
+          displayWeatherResults(locRes.results[i]);
         }
       }
     })
     .catch(function (error) {
       console.error(error);
     });
-  }
+}
 
 function findCityOnSubmit(event) {
   event.preventDefault();
 
+  var appidKey = "097dc737a3f579f2c4a7d1902160dc4e"
   var cityInputVal = document.querySelector('#cityInputVal').value;
-  var searchResultText = document.querySelector('#search-result-text').value;
+  
 
   if (cityInputVal) {
-    console.log(searchResultText)
+    console.log("city input successful")
   } else {
     console.error('You need a search input value');
+    return;
   }
 
-  getWeather(cityInputVal, searchResultText)
+  getWeather(cityInputVal)
 }
   
-
  searchFormEl.addEventListener('submit', findCityOnSubmit);
   
-getParams();    
+getParams();

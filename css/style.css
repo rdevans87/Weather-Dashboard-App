@@ -57,8 +57,8 @@ text-align: left;
 
 
 .box {
-flex-direction: column;
-float: left;
+ flex-direction: column;
+ float: left;
  padding-top: 10px;
  box-shadow: 0 4px 8px 0 black;
  border: 1px solid black;
