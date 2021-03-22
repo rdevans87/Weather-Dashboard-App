@@ -12,9 +12,10 @@ function findCityOnSubmit(event) {
     console.error('You need a search input value');
   }
 
-  var queryString ="https://api.openweathermap.org/data/2.5/forecast?q=" + cityInputVal + "&appid=" + appidKey;
-
+  var queryString ="./city-search.html?q="+ cityInputVal + "&appid=" + appidKey;
+  
   location.assign(queryString);
+  
 }
   
 searchFormEl.addEventListener('submit', findCityOnSubmit);

@@ -1,19 +1,23 @@
 var resultContentEl = document.querySelector('#result-content');
 var searchFormEl = document.querySelector('#search-form');
+var resultText = document.querySelector('#city-name-text')
+var savedSearchEl= document.getElementById("#list-group-item")
+var citySearchList = document.getElementById("#saved-search-list")
 
-function getParams() {
 
-var searchParamsArr = document.location.search.split('&');
-var query = searchParamsArr[0].split('=').pop();
-vart  = searchParamsArr[1].split('=').pop();
+// function getParams() {
 
-  getCityWeather(query);
+// var searchParamsArr = document.location.search.split('&');
+// var query = searchParamsArr[0].split('=').pop();
+// vart  = searchParamsArr[1].split('=').pop();
 
-}
-function displayWeatherResults(resultObj) {
- console.log(resultObj);
+//   getCityWeather(query);
+
+// }
+// function displayWeatherResults(resultObj) {
+//  console.log(resultObj);
     
-}
+// }
 //  weatherElement.innerHTML= '<img src="assets/images/weatherAppimgSml.png"/>'
 
 //  var cityNameText = document.createElement("div");
@@ -21,20 +25,13 @@ function displayWeatherResults(resultObj) {
 
 // }
 
-function getCityWeather(query) {
+function getWeatherForecast () {
 
-  var locQueryUrl = "https://api.openweathermap.orgdata/2.5/forecast?q=&appid="
-  
-  var appidKey = "097dc737a3f579f2c4a7d1902160dc4e"
+var cityInputVal = document.querySelector("#city-input").value;
+var appidKey = "097dc737a3f579f2c4a7d1902160dc4e"
+var openWeatherUrl = "https://api.openweathermap.org/data/2.5/forecast?q=" + cityInputVal + "&appid=" + appidKey ;
 
-  if (cityInput) {
-    locQueryUrl = "https://api.openweathermap.org/data/2.5/forecast?q=" + cityInputVal + "&appid=" + appidKey ;
-
-  } 
-
-
-  locQueryUrl = locQueryUrl + '&q=' + query ;
-    fetch(locQueryUrl)
+    fetch(openWeatherUrl)
     .then(function (response) {
       if (!response.ok) {
         throw response.json();
@@ -43,7 +40,7 @@ function getCityWeather(query) {
     })
     .then(function (locRes) {
 
-      resultTextEl.textContent = locRes.search.query;
+    var  resultTextEl.textContent = locRes.search.query;
 
       console.log(locRes);
 
@@ -61,6 +58,7 @@ function getCityWeather(query) {
       console.error(error);
     });
 }
+
 
 function findCityOnSubmit(event) {
   event.preventDefault();
@@ -81,4 +79,4 @@ function findCityOnSubmit(event) {
   
  searchFormEl.addEventListener('submit', findCityOnSubmit);
   
-getParams();
+getWeatherForecast();
