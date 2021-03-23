@@ -172,21 +172,11 @@ button a:hover {
  width: 210px;
  
 }
-      
-
-@media screen and (max-width: 1000px) {
-    .row{
-   
-    }
-  }  
-
+    
 
   @media screen and (min-width: 400px) {
 #sidebar {
     max-width: 100%;
-  
-    
-  
   
   }
 
