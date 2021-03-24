@@ -25,15 +25,17 @@ function getParams() {
     resultList = document.append
     textContent(resultBody);
 
-    function getWeather (query) 
+
+}
+
+    function getWeather (query) {
     console.log(query);
       
       var apiQueryUrl = "https://api.openweathermap.org/find?q=&appid=";
    
      if (cityInputVal) {
        apiQueryUrl = "https://api.openweathermap.org/data/2.5/forecast?q=" + cityInputVal + "&appid=097dc737a3f579f2c4a7d1902160dc4e";
-   
-     }
+    }
      var query = document.querySelector('#city-input').value;
 
      apiQueryUrl = apiQueryUrl +  cityInputVal + '&q=' + query;
@@ -63,24 +65,21 @@ function getParams() {
        })   
         .catch(function (error) {
         console.log.error(error)   
-       } );         
+       } );                 
 
-}        
-
-
+      }
           function findCityOnSubmit(event) {
           event.preventDefault()
-          
-          var cityInputVal = document.querySelector('#cityInputVal').val;
-          
-          
+          }  
+          var cityInputVal = document.querySelector('#cityInputVal').value
+     
           if (cityInputVal) {
             console.log(searchResultText)
-          } else {
-            console.error('You need a search input value');
-          } 
-        
-        }  
+          } else {      
+            console.error('You need a search input value');     
+            
+            getWeather(cityInputVal);
+          }
           searchFormEl.addEventListener('submit', findCityOnSubmit);
 
           getParams();
