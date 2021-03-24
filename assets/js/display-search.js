@@ -11,7 +11,8 @@ function getWeatherOnSubmit(event) {
   var cityInputVal = document.querySelector('#city-input').value;
 
   var openWeatherApi = "https://api.openweathermap.org/data/2.5/forecast?q=" + cityInputVal + "&appid=" + "74a15e51334b346d7b36d2511a654776";
-
+  
+  openWeatherApi = openWeatherApi + '&q=' + cityInputVal;
   fetch(openWeatherApi)  
     .then(function (response) {
       if (!response.ok) {
@@ -19,22 +20,29 @@ function getWeatherOnSubmit(event) {
       }
       return response.json();
    })
-     .then(function (resultsData) {
-      displayWeatherResults (resultsData)
+     .then(function (data) {
+      resultTextEl.textContent = openWeatherApi.cityInputVal;
+      displayWeatherResults(data);
      });
-      
-} 
+}
+       
+      function displayWeatherResults (data) {
+        console.log(data)
 
-      function displayWeatherResults (resultsData) {
-      console.log(resultsData);
-      resultTextEl.textContent = '<h2>City:</h2>'
+        var resultBody = document.createElement('h2');
+        resultTextEl.append(resultBody);
+
 
         var bodyContentEl = document.createElement('p');
         bodyContentEl.innerHTML =
-        '<strong>Date:</strong> ' + resultObj.date + '<br/>';
+        '<strong>Date:</strong> ' + data.date + '<br/>';
+      
+      // console.log(resultsData);
+      resultTextEl.innerHTML =  ('<h2>City:</h2>')
+    
 
 
-        resultTextEl.textContent = '<h2>City:</h2>'
+      
 }
 
 searchFormEl.addEventListener('submit', getWeatherOnSubmit);
