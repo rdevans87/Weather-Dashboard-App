@@ -13,9 +13,9 @@ function findCityOnSubmit(event) {
      return;
   }   
   
-  var cityUrlString = "./city-search.html?q=" + cityInputVal + "&appid=" + appidKey;
+  var apiQueryString = "./city-search.html?q=" + cityInputVal + "&appid=" + appidKey;
 
-  location.assign(cityUrlString)
+  location.assign(apiQueryString)
 
 }
 searchFormEl.addEventListener('submit', findCityOnSubmit);
