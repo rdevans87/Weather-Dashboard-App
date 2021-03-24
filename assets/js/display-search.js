@@ -26,23 +26,10 @@ function getWeatherOnSubmit(event) {
      });
 }
        
-      function displayWeatherResults (data) {
+      function displayWeatherResults(data) {
         console.log(data)
-
-        var resultBody = document.createElement('h2');
-        resultTextEl.append(resultBody);
-
-
-        var bodyContentEl = document.createElement('p');
-        bodyContentEl.innerHTML =
-        '<strong>Date:</strong> ' + data.date + '<br/>';
-      
-      // console.log(resultsData);
-      resultTextEl.innerHTML =  ('<h2>City:</h2>')
-    
-
-
+        
+        resultTextEl.innerHTML =  ('<h2>City:</h2>');
       
 }
-
 searchFormEl.addEventListener('submit', getWeatherOnSubmit);
