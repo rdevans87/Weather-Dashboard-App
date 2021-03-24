@@ -5,64 +5,36 @@ var citySearchList = document.getElementById("#saved-search-list");
 var resultListEl = document.getElementById("#result-list");
 var resultTextEl = document.querySelector("#result-text");
 
-// function getParams() {
-//   var searchParamsArr = document.location.search.split('&');
 
-//   var query = searchParamsArr[0].split('=').pop();
-//   var key = searchParamsArr[1].split('=').pop();
+function getWeatherOnSubmit(event) {
+  event.preventDefault()
+  var cityInputVal = document.querySelector('#city-input').value;
 
+  var openWeatherApi = "https://api.openweathermap.org/data/2.5/forecast?q=" + cityInputVal + "&appid=" + "74a15e51334b346d7b36d2511a654776";
 
-// }
-
-    function displayWeatherResults(resultObj) {
-    console.log(resultobj);
-
-     resultTextEl.document.getElementById('result-text');
-     resultListEl.textContent = '<h2>City:</h2>'
-
-    listGroupItem.textContent.append
-    resultList = document.append
-    textContent(resultBody);
-
-
-}
-
-    function getWeatherForecast () {
-
-    var cityInputVal = document.querySelector('#city-input').value;
-
-    var  openWeatherApi = "https://api.openweathermap.org/data/2.5/forecast?q=" + cityInputVal + "&appid=" + "74a15e51334b346d7b36d2511a654776";
-
-    fetch(openWeatherApi)
-  
+  fetch(openWeatherApi)  
     .then(function (response) {
       if (!response.ok) {
         throw response.json();
       }
       return response.json();
    })
-     .then(function (apiRes) {
-       resultTextEl.textContent = apiRes;
-       console.log(apiRes);
+     .then(function (resultsData) {
+      displayWeatherResults (resultsData)
      });
-}    
-  
-        function findCityOnSubmit(event) {
-          event.preventDefault()
       
-          var cityInputVal = document.querySelector('#city-input').value;
-        
-         
-          if (cityInputVal) {
-            console.log("city input successful")
-          } else {      
-            console.log('You need a search input value');     
-            return;  
-          }       
+} 
 
-            getWeatherForecast(cityInputVal);
-        }
-            
-          searchFormEl.addEventListener('submit', findCityOnSubmit);
+      function displayWeatherResults (resultsData) {
+      console.log(resultsData);
+      resultTextEl.textContent = '<h2>City:</h2>'
 
-          // getParams();
+        var bodyContentEl = document.createElement('p');
+        bodyContentEl.innerHTML =
+        '<strong>Date:</strong> ' + resultObj.date + '<br/>';
+
+
+        resultTextEl.textContent = '<h2>City:</h2>'
+}
+
+searchFormEl.addEventListener('submit', getWeatherOnSubmit);
