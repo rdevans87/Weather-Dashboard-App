@@ -25,11 +25,15 @@ max-width:100%;
 h1 {
 font-size: 70px;
 }
+
+#city-input:first-letter {
+  text-transform: uppercase;
+}
   
 
 ul {
 
-list-style-type: none;;
+list-style-type: none;
 padding-top: 10px;
 text-align: center;
 
@@ -39,6 +43,11 @@ li {
 text-align: left;
 
 }
+ 
+#result-content {
+  list-style-type: none;
+}
+
 
  
 .card {

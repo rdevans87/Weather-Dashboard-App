@@ -1,52 +1,52 @@
-var resultContentEl = document.querySelector('#result-content');
+var resultContent = document.querySelector('#result-content');
 var searchFormEl = document.querySelector('#search-form');
 var savedSearchEl = document.getElementById("#list-group-item");
 var citySearchList = document.getElementById("#saved-search-list");
 var resultListEl = document.getElementById("#result-list");
 var resultTextEl = document.querySelector("#result-text");
+var backButtonEl = document.getElementById("back-button");
 
 
 function getWeatherOnSubmit(event) {
   event.preventDefault();
-
+  
   var cityInputVal = document.querySelector('#city-input').value;
 
   var openWeatherApi = "https://api.openweathermap.org/data/2.5/forecast?q=" + cityInputVal + "&appid=" + "74a15e51334b346d7b36d2511a654776";
-  
+  +"units=imperial" ;
   openWeatherApi = openWeatherApi + '&q=' + cityInputVal;
+  
   fetch(openWeatherApi)  
     .then(function (response) {
-        console.log(response)
-        return response.json();
+      console.log(response)
+      return response.json();
     })
      .then(function (data) { 
        console.log(data)
-
-        var resultTextEl = document.querySelector('#result-content');
-        resultTextEl.innerHTML = "<h2>City: " + data + "</h2>";
-        cityName.textContent = "text content";
-        resultTextEl.textContent = data.weather;
-        resultContentEl.append(cityName);
-        resultContentEl.append(weather);
-        
-    });
+        var title = cityInputVal;
+        var humidity = data.list[0].main.humidity;
+        var temp = data.list[0].main.temp;
+        var wind =  data.list[0].wind.speed;
+        console.log(temp, humidity, wind)
+        resultContent = document.querySelector('#result-content');
+        resultContent.innerHTML = "<h2>City: " + cityInputVal.toUpperCase(title) + "</h2>" + "<br>" + "<li>Temperature: " + 
+        temp + "</li>" + "<br>" + "<li>Humidity: " + humidity + "</li>" + "<br>" + "<li>Wind Speed: " + wind + "</li>" ;
+     })
 }
        
-  //     function displayWeather(data) {
-  //       var temp = document.querySelector("#result-list");
-  //       temp.textContent = "This is the temp element"
-  //       resultListEl.append(temp);
-  //       resultTextEl = document.querySelector(".card card-rounded");
-  //       resultTextEl.textContent = "<h2>City: " + (data.name) + "</h2>";
-  //       resultTextEl.append(temp);
-    
-  // }     
-      // var cityName = object[i].name;
-      // var conditionsList = object[i].list.wind.speed
-
-      // cityName = document.append('h2');
-      // conditionsList = document.append('li');
+  //    function displayWeatherForecast(JSON) {
+  //      var resultListEl = document.querySelector('#result-list')
+  //      var temperature = json.list[0].main.temp;
+  //      temperature.append(resultListEl)
        
-      
+       
+       
+  //      document.createElement("li");
+  //       tempEl.textContent = json.list[0].main.temp.html;
+  //       resultListEl.append(tempEl);   
+  // }     
+
+
+
 
 searchFormEl.addEventListener('submit', getWeatherOnSubmit);
