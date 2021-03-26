@@ -12,7 +12,7 @@ function getWeatherOnSubmit(event) {
   
   var cityInputVal = document.querySelector('#city-input').value;
 
-  var openWeatherApi = "https://api.openweathermap.org/data/2.5/forecast?q=" + cityInputVal + "&appid=" + "74a15e51334b346d7b36d2511a654776" + "units=imperial";
+  var openWeatherApi = "https://api.openweathermap.org/data/2.5/forecast?q=" + cityInputVal + "&units=imperial" + "&appid=" + "b0ff6d197a40a5f8e42c9a3871298d52";
 
   openWeatherApi = openWeatherApi + '&q=' + cityInputVal;
 
@@ -30,16 +30,8 @@ function getWeatherOnSubmit(event) {
         console.log(temp, humidity, wind)
         resultContent = document.querySelector('#result-content');
         resultContent.innerHTML = "<h2>City: " + cityInputVal.toUpperCase(title) + "</h2>" + "<br>" + "<li>Temperature: " + 
-        temp + "</li>" + "<br>" + "<li>Humidity: " + humidity + "</li>" + "<br>" + "<li>Wind Speed: " + wind + "</li>" ;
-     
-        cityInputVal 
-
-     
-     
-      })
-
-
-
+        temp + "&#8457" + "</li>" + "<br>" + "<li>Humidity: " + humidity + "</li>" + "<br>" + "<li>Wind Speed: " + wind + "</li>";
+    })
 }
 
 
