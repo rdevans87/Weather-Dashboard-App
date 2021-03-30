@@ -26,9 +26,9 @@ function getWeatherOnSubmit(event) {
         var city = cityInputVal;
         console.log(city); 
         for (var i = 0; i < localStorage.length; i++) {
-        city[i] = localStorage.getItem("city", city);
+        localStorage.setItem("city", city);
         var citySearchList = document.querySelector(".list-group-item");
-          citySearchList.append(city);
+        citySearchList.append(city);
 
         } 
 
@@ -52,16 +52,18 @@ function getWeatherOnSubmit(event) {
             resultContent = document.querySelector('#result-content');
             resultContent.innerHTML = "<h2>City: " + cityInputVal.toUpperCase(city) + "</h2>" + "<br>" + "<p>Forecast: " + "<strong>" + currentWeather + "</strong>" + "</p>" + "<li>Temperature: " + "<strong>" +
             temp + "&#8457" + "</strong>" +"</li>" + "<br>" + "<li>Humidity: " + "<strong>" + humidity + "%" + "</strong>" + "</li>" + "<br>" + "<li>Wind Speed: " + "<strong>" + wind_speed + " MPH" + "</strong>" + "</li>" + "<br>" + "<li>UV Index: " + "<strong>" + uvi + "</strong>" + "</li>" ;
-            
-        // current = apiOneCall;
-      //  var humidity = data.daily[0].main.humidity;
-      //   var temp = data.list[0].main.temp;
-      //   var uvi = data.current. 
-      //   var wind =  data.list[0].wind.speed;
-      //   console.log(temp, humidity, wind, uvi);
-      //   resultContent = document.querySelector('#result-content');
-      //   resultContent.innerHTML = "<h2>City: " + cityInputVal.toUpperCase(city) + "</h2>" + "<br>" + "<li>Temperature: " + 
-      //   temp + "&#8457" + "</li>" + "<br>" + "<li>Humidity: " + humidity + "%" + "</li>" + "<br>" + "<li>Wind Speed: " + wind + " MPH" + "</li>" ;
+         
+          // .then(function (data) {  
+          //     daily = data.daily[0, 1, 2, 3, 4, 5];        
+          //     humidity = data.daily[0].humidity;
+          //     // temp = data.list[0].main.temp;
+          //     // uvi = data.current.uvi 
+          //     //  wind =  data.list[0].wind.speed;
+          //     // console.log(temp, humidity, wind, uvi);
+          //     console.log(humidity)
+          //     forecastResult = document.querySelector('#result-content');
+          //     resultContent.innerHTML = "<h2>City: " + cityInputVal.toUpperCase(city) + "</h2>" + "<br>" + "<li>Temperature: " + 
+          //       temp + "&#8457" + "</li>" + "<br>" + "<li>Humidity: " + humidity + "%" + "</li>" + "<br>" + "<li>Wind Speed: " + wind + " MPH" + "</li>" ;
         
           
 
