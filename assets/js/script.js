@@ -9,14 +9,6 @@ var weatherIcon = document.querySelector("#weather-icon")
 function getWeatherOnSubmit(event) {
   event.preventDefault();
 
-  for (var i = 0; i < localStorage.length; i++) {
-    citySearchList = cityInputVal.localStorage.getItem(i++);
-    citySearchList.append("<button class='list-group-item'>" + cityInputVal + "</button>");
-    citySearchList.innerHTML = "<button class='list-group-item'>" + cityInputVal + "</button>";
-  }
-
-    
-  
   var cityInputVal = document.querySelector('#city-input').value;
 //connnect to open weather API five day forecast. cityInput as value.
   var openWeatherApi = "https://api.openweathermap.org/data/2.5/forecast?q=" + cityInputVal + "&units=imperial" + "&appid=" + "b0ff6d197a40a5f8e42c9a3871298d52";
@@ -31,11 +23,13 @@ function getWeatherOnSubmit(event) {
      .then(function (data) { 
        console.log(data)
         var city = cityInputVal;
-        // var humidity = data.list[0].main.humidity;
-        // var temp = data.list[0].main.temp;
-        // var wind =  data.list[0].wind.speed;
-        // // var icon  = data.list[0].weather.main.icon;
         console.log(city);
+        for (var i = 0; i < city.length; i++) {
+          city[i] = localStorage.getItem;
+          var citySearchList = document.querySelector(".list-group-item")
+          citySearchList.textContent = city;
+          
+        }
         // resultContent = document.querySelector('#result-content');
         // resultContent.innerHTML = "<h2>City: " + cityInputVal.toUpperCase(city) + "</h2>" + "<br>" + "<li>Temperature: " + 
         // temp + "&#8457" + "</li>" + "<br>" + "<li>Humidity: " + humidity + "%" + "</li>" + "<br>" + "<li>Wind Speed: " + wind + " MPH" + "</li>" ;
@@ -50,9 +44,6 @@ function getWeatherOnSubmit(event) {
         })
          .then(function (data) { 
            console.log(data);
-    
-            currentDate = moment.now().date.now();
-            console.log(date)
             var humidity = data.current.humidity;
             var uvi = data.current.uvi;
             var temp = data.current.temp;
