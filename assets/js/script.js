@@ -10,7 +10,7 @@ function getWeatherOnSubmit(event) {
   event.preventDefault();
 
   for (var i = 0; i < localStorage.length; i++) {
-    citySearchList = cityInputVal.localStorage.getItem(i);
+    citySearchList = cityInputVal.localStorage.getItem(i++);
     citySearchList.append("<button class='list-group-item'>" + cityInputVal + "</button>");
     citySearchList.innerHTML = "<button class='list-group-item'>" + cityInputVal + "</button>";
   }
@@ -49,17 +49,19 @@ function getWeatherOnSubmit(event) {
           return response.json();
         })
          .then(function (data) { 
-           console.log(data)
-            coord = city;
-            var currentWeather = data.current.weather[0].description;
-            var uvi = data.current.uvi;
+           console.log(data);
+    
+            currentDate = moment.now().date.now();
+            console.log(date)
             var humidity = data.current.humidity;
+            var uvi = data.current.uvi;
             var temp = data.current.temp;
-            var wind_speed = data.current.wind_speed;;
+            var wind_speed = data.current.wind_speed;
+            var currentWeather = data.current.weather[0].description;
             console.log(uvi, temp, humidity, wind_speed, currentWeather);
             resultContent = document.querySelector('#result-content');
-            resultContent.innerHTML = "<h2>City: " + cityInputVal.toUpperCase(city) + "</h2>" + "<br>" + "<p>Forecast: " + currentWeather + "</p>" + "<li>Temperature: " + 
-            temp + "&#8457" + "</li>" + "<br>" + "<li>Humidity: " + humidity + "%" + "</li>" + "<br>" + "<li>Wind Speed: " + wind_speed + " MPH" + "</li>" + "<br>" + "<li>UV Index: " + uvi + "</li>" ;
+            resultContent.innerHTML = "<h2>City: " + cityInputVal.toUpperCase(city) + "</h2>" + "<br>" + "<p>Forecast: " + "<strong>" + currentWeather + "</strong>" + "</p>" + "<li>Temperature: " + "<strong>" +
+            temp + "&#8457" + "</strong>" +"</li>" + "<br>" + "<li>Humidity: " + "<strong>" + humidity + "%" + "</strong>" + "</li>" + "<br>" + "<li>Wind Speed: " + "<strong>" + wind_speed + " MPH" + "</strong>" + "</li>" + "<br>" + "<li>UV Index: " + "<strong>" + uvi + "</strong>" + "</li>" ;
             
         // current = apiOneCall;
       //  var humidity = data.daily[0].main.humidity;
