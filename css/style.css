@@ -29,7 +29,7 @@ font-size: 70px;
 #city-input:first-letter {
   text-transform: uppercase;
 }
-  
+ 
 
 ul {
 
@@ -51,8 +51,10 @@ text-align: left;
 
  
 .card {
-  box-shadow: 0 4px 8px 0 black;;
-  flex-wrap: wrap;; 
+  box-shadow: 0 4px 8px 0 black;
+  flex-wrap: wrap;
+  position: relative;
+  text-align: left;
   background-color: #f1f1f1;
   padding: 25px;
   border: 1px solid black;
@@ -62,6 +64,7 @@ text-align: left;
   margin-left: 30px;
   overflow-block: column;
   max-width: 110vh;
+
 }
 
 
@@ -81,7 +84,7 @@ text-align: left;
 
 }
 
-.box2:first-child{
+.box2:first-child  {
   flex-direction: column;
   display: inline-flex;
   padding-top: 10px;
@@ -133,9 +136,10 @@ text-align: left;
 }
 
 .column {
-  max-width: 22%  
+  max-width: 22%;
   
 }
+
 
 
 
@@ -182,7 +186,8 @@ button a:hover {
 @media screen and (max-width: 1200px) {
 
 .card {
-flex-direction: column;
+max-width: 50%;
+flex-direction: row;
 flex-wrap: wrap;
 
 }
@@ -193,12 +198,12 @@ flex-wrap: wrap;
 @media screen and (max-width: 1200px) {
 
 .row {
-grid-column: 1;
+flex-direction: column;
+column-count: 2;
 float: left;
+
     
 }
-
-
     
 }
 

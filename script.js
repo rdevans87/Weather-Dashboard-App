@@ -4,6 +4,7 @@ var resultListEl = document.getElementById("#result-list");
 var resultTextEl = document.querySelector("#result-text");
 var backButtonEl = document.getElementById("#back-button");
 var forecastResults = document.querySelector("#forecast-results")
+var weatherIcon = document.querySelector("#weather-icon")
 
 function getWeatherOnSubmit(event) {
   event.preventDefault();
@@ -39,7 +40,7 @@ function getWeatherOnSubmit(event) {
         // resultContent.innerHTML = "<h2>City: " + cityInputVal.toUpperCase(city) + "</h2>" + "<br>" + "<li>Temperature: " + 
         // temp + "&#8457" + "</li>" + "<br>" + "<li>Humidity: " + humidity + "%" + "</li>" + "<br>" + "<li>Wind Speed: " + wind + " MPH" + "</li>" ;
           
-        //use cityInput coordinates from forecast to apply Onecall Api for current weather and UV index. UV Index API deprecates on 04/01/2020.
+        //use cityInput coordinates from forecast to apply Onecall Api for current weather and UV index. UV Index API deprecated on 04/01/2020.
         var apiOneCall = "https://api.openweathermap.org/data/2.5/onecall?" + "lat=" + data.city.coord.lat + "&lon=" + data.city.coord.lon + "&units=imperial" + "&appid=" + "b0ff6d197a40a5f8e42c9a3871298d52";
 
         fetch(apiOneCall)
@@ -49,21 +50,19 @@ function getWeatherOnSubmit(event) {
         })
          .then(function (data) { 
            console.log(data)
-           current = apiOneCall;
             coord = city;
+            var currentWeather = data.current.weather[0].description;
             var uvi = data.current.uvi;
             var humidity = data.current.humidity;
             var temp = data.current.temp;
-            var wind_speed = data.current.wind_speed;
-        //     weather = 
-        // // var icon  = data.list[0].weather.main.icon;
-            console.log(uvi, temp, humidity, wind_speed);
+            var wind_speed = data.current.wind_speed;;
+            console.log(uvi, temp, humidity, wind_speed, currentWeather);
             resultContent = document.querySelector('#result-content');
-            resultContent.innerHTML = "<h2>City: " + cityInputVal.toUpperCase(city) + "</h2>" + "<br>" + "<p>" + "</p>" + "<br>" + "<li>Temperature: " + 
-            temp + "&#8457" + "</li>" + "<br>" + "<li>Humidity: " + humidity + "%" + "</li>" + "<br>" + "<li>Wind Speed: " + wind_speed + " MPH" + "UV Index: " + uvi + "</li>";
-          
-           
-      //  var humidity = data.list[0].main.humidity;
+            resultContent.innerHTML = "<h2>City: " + cityInputVal.toUpperCase(city) + "</h2>" + "<br>" + "<p>Forecast: " + currentWeather + "</p>" + "<li>Temperature: " + 
+            temp + "&#8457" + "</li>" + "<br>" + "<li>Humidity: " + humidity + "%" + "</li>" + "<br>" + "<li>Wind Speed: " + wind_speed + " MPH" + "</li>" + "<br>" + "<li>UV Index: " + uvi + "</li>" ;
+            
+        // current = apiOneCall;
+      //  var humidity = data.daily[0].main.humidity;
       //   var temp = data.list[0].main.temp;
       //   var uvi = data.current. 
       //   var wind =  data.list[0].wind.speed;
