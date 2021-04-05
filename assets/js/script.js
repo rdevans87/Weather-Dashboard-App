@@ -81,20 +81,20 @@ function getWeatherOnSubmit(event) {
           forecastResults.innerHTML = "<h3>Date: " + "</h3>" + "<br>" + "<p>Temp: " + tempThree + "&#8457" + "</p>" + "<p>Humidity: " + humidityThree + "%" + "</p>" + "<p>UV Index: " + uviThree + "</p>" ;                                 
         
           forecastThree = data.daily[3];
-        //   tempZero = data.daily[0].temp.day;
-        //   humidityZero= data.daily[0].humidity
-        //   uviZero= data.daily[0].uvi 
-        // console.log(humidityZero, tempZero, uviZero)
-        //  forecastResults = document.querySelector('#dayFour');
-        //   forecastResults.innerHTML = "<h3>Date: " + "</h3>" + "<br>" + "<p>Temperature: " + tempZero + "&#8457" + "</p>" + "<br>" + "<p>Humidity: " + humidityZero + "%" + "</p>" + "<br>" + "<p>UV Index: " + uviZero + "</p>" ;                                 
-        
+          tempFour = data.daily[3].temp.day;
+          humidityFour = data.daily[3].humidity;
+          uviFour = data.daily[3].uvi; 
+          console.log(humidityFour, tempFour, uviFour);
+          forecastResults = document.querySelector('#dayFour');
+          forecastResults.innerHTML =  forecastResults.innerHTML = "<h3>Date: " + "</h3>" + "<br>" + "<p>Temp: " + tempFour + "&#8457" + "</p>" + "<p>Humidity: " + humidityFour + "%" + "</p>" + "<p>UV Index: " + uviFour + "</p>" ;
 
-        //   tempZero = data.daily[0].temp.day;
-        //   humidityZero= data.daily[0].humidity
-        //   uviZero= data.daily[0].uvi 
-        // console.log(humidityZero, tempZero, uviZero)
-        //  forecastResults = document.querySelector('#dayFive');
-        //   forecastResults.innerHTML = "<h3>Date: " + "</h3>" + "<br>" + "<p>Temperature: " + tempZero + "&#8457" + "</p>" + "<br>" + "<p>Humidity: " + humidityZero + "%" + "</p>" + "<br>" + "<p>UV Index: " + uviZero + "</p>" ;                                 
+          forecastFour = data.daily[4];
+          tempFive = data.daily[4].temp.day;
+          humidityFive = data.daily[4].humidity;
+          uviFive = data.daily[4].uvi; 
+          console.log (humidityFive, tempFive, uviFive);
+          forecastResults = document.querySelector('#dayFive');
+          forecastResults.innerHTML =  forecastResults.innerHTML = "<h3>Date: " + "</h3>" + "<br>" + "<p>Temp: " + tempFive + "&#8457" + "</p>" + "<p>Humidity: " + humidityFive + "%" + "</p>" + "<p>UV Index: " + uviFive + "</p>" ;
         
         })  
 
