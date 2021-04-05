@@ -55,12 +55,46 @@ function getWeatherOnSubmit(event) {
           temp + "&#8457" + "</strong>" + "</li>" + "<br>" + "<li>Humidity: " + "<strong>" + humidity + "%" + "</strong>" + "</li>" + "<br>" + "<li>Wind Speed: " + "<strong>" + wind_speed + " MPH" + "</strong>" + "</li>" + "<br>" + "<li>UV Index: " + "<strong>" + uvi + "</strong>" + "</li>";
           // var weatherIcon = currentWeather.icon[1];
           // weatherIcon = document.getElementById("#weather-icon").innerHTML = "http://openweathermap.org/img/wn/" + weatherIcon + "@2x.png";
-          tempZero = data.daily[0].temp.day;
-          humidityZero= data.daily[0].humidity
-          uviZero= data.daily[0].uvi 
-        console.log(humidityZero, tempZero, uviZero)
-         forecastResults = document.querySelector('#dayOne');
-          forecastResults.innerHTML = "<h3>Date: " + "</h3>" + "<br>" + "<p>Temperature: " + tempZero + "&#8457" + "</p>" + "<br>" + "<p>Humidity: " + humidityZero + "%" + "</p>" + "<br>" + "<p>UV Index: " + uviZero + "</p>" ;                                 
+         
+          dailyWeather = data.daily[0]; 
+          tempOne = data.daily[0].temp.day;
+          humidityOne= data.daily[0].humidity
+          uviOne = data.daily[0].uvi 
+          console.log(humidityOne, tempOne, uviOne)
+          forecastResults = document.querySelector('#dayOne');
+          forecastResults.innerHTML = "<h3>Date: " + "</h3>" + "<br>" + "<p>Temp: " + tempOne + "&#8457" + "</p>" + "<p>Humidity: " + humidityOne + "%" + "</p>" +  "<p>UV Index: " + uviOne + "</p>" ;                                 
+        
+          forecast = data.daily[1];
+          tempTwo = data.daily[1].temp.day;
+          humidityTwo = data.daily[1].humidity;
+          uviTwo = data.daily[1].uvi;
+          console.log(humidityTwo, tempTwo, uviTwo)
+          forecastResults = document.querySelector('#daytwo');
+          dayTwo.innerHTML = "<h3>Date: " + "</h3>" + "<br>" + "<p>Temp: " + tempTwo + "&#8457" + "</p>" + "<p>Humidity: " + humidityTwo + "%" + "</p>" + "<p>UV Index: " + uviTwo + "</p>" ;                                 
+        
+          forecastTwo = data.daily[2];
+          tempThree = data.daily[2].temp.day;
+          humidityThree = data.daily[2].humidity;
+          uviThree = data.daily[2].uvi;
+          console.log(humidityThree, tempThree, uviThree);
+          forecastResults = document.querySelector('#dayThree');
+          forecastResults.innerHTML = "<h3>Date: " + "</h3>" + "<br>" + "<p>Temp: " + tempThree + "&#8457" + "</p>" + "<p>Humidity: " + humidityThree + "%" + "</p>" + "<p>UV Index: " + uviThree + "</p>" ;                                 
+        
+          forecastThree = data.daily[3];
+        //   tempZero = data.daily[0].temp.day;
+        //   humidityZero= data.daily[0].humidity
+        //   uviZero= data.daily[0].uvi 
+        // console.log(humidityZero, tempZero, uviZero)
+        //  forecastResults = document.querySelector('#dayFour');
+        //   forecastResults.innerHTML = "<h3>Date: " + "</h3>" + "<br>" + "<p>Temperature: " + tempZero + "&#8457" + "</p>" + "<br>" + "<p>Humidity: " + humidityZero + "%" + "</p>" + "<br>" + "<p>UV Index: " + uviZero + "</p>" ;                                 
+        
+
+        //   tempZero = data.daily[0].temp.day;
+        //   humidityZero= data.daily[0].humidity
+        //   uviZero= data.daily[0].uvi 
+        // console.log(humidityZero, tempZero, uviZero)
+        //  forecastResults = document.querySelector('#dayFive');
+        //   forecastResults.innerHTML = "<h3>Date: " + "</h3>" + "<br>" + "<p>Temperature: " + tempZero + "&#8457" + "</p>" + "<br>" + "<p>Humidity: " + humidityZero + "%" + "</p>" + "<br>" + "<p>UV Index: " + uviZero + "</p>" ;                                 
         
         })  
 
@@ -70,45 +104,6 @@ function getWeatherOnSubmit(event) {
     });
 
        
-
-          
- 
-            //   <div class="box" id="dayTwo">
-            //      <h3>Date:</h3>
-            //       <br>
-            //     <p>Temp:</p>
-            //    <p>Humidity:</p>
-            //   <p>UV index:</p>
-            //  </div>
-            //   </div>
-
-            // <div class="column">
-            //  <div class="box" id="dayThree">
-            //    <h3>Date:</h3>
-            //     <br>
-            //    <p>Temp:</p>
-            //    <p>Humidity:</p>
-            //    <p>UV index:</p>
-            //   </div>
-            //     </div>
-
-            //   <div class="column">
-            //     <div class="box" id="dayFour">
-            //       <h3>Date:</h3>
-            //       <br>
-            //       <p>Temp:</p>
-            //        <p>Humidity:</p>
-            //      <p>UV index:</p>
-            //     </div>
-            //     </div>
-            //     <div class="column">
-            //       <div class="box" id="dayThree">
-            //      <h3>Date:</h3>
-            //       <br>
-            //      <p>Temp:</p>
-            //     <p>Humidity:</p>
-            //    <p>UV index:</p>
-            //     </div>
 
         
             //   var weatherIcon =icon[0];
