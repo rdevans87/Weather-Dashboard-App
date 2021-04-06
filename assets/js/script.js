@@ -32,12 +32,12 @@ function getWeatherOnSubmit(event) {
       document.getElementById("city1").innerHTML = city.toString(i);
       searchOne = localStorage.getItem("city");
      
-    
       }     
          //use cityInput coordinates from forecast to apply Onecall Api for current weather and UV index. UV Index API deprecated on 04/01/2020.
           var apiOneCall = "https://api.openweathermap.org/data/2.5/onecall?" + "lat=" + data.city.coord.lat + "&lon=" + data.city.coord.lon + "&units=imperial" + "&appid=" + "b0ff6d197a40a5f8e42c9a3871298d52";
-
-       fetch(apiOneCall)
+          
+       
+        fetch(apiOneCall)
         .then(function (response) {
         console.log(response)
         return response.json();
@@ -49,20 +49,20 @@ function getWeatherOnSubmit(event) {
            var temp = data.current.temp;
           var wind_speed = data.current.wind_speed;
           var currentWeather = data.current.weather[0].description;
-          console.log(uvi, temp, humidity, wind_speed, currentWeather);
+          weatherIcon = data.current.weather[0].icon;
+          console.log(uvi, temp, humidity, wind_speed, currentWeather, weatherIcon);
          resultContent = document.querySelector('#result-content');
          resultContent.innerHTML = "<h2>City: " + city.toUpperCase(city) + "</h2>" + "<br>" + "<p>Forecast: " + "<strong>" + currentWeather + "</strong>" + "</p>" + "<li>Temperature: " + "<strong>" +
-          temp + "&#8457" + "</strong>" + "</li>" + "<br>" + "<li>Humidity: " + "<strong>" + humidity + "%" + "</strong>" + "</li>" + "<br>" + "<li>Wind Speed: " + "<strong>" + wind_speed + " MPH" + "</strong>" + "</li>" + "<br>" + "<li>UV Index: " + "<strong>" + uvi + "</strong>" + "</li>";
-          // var weatherIcon = currentWeather.icon[1];
-          // weatherIcon = document.getElementById("#weather-icon").innerHTML = "http://openweathermap.org/img/wn/" + weatherIcon + "@2x.png";
-         
+          temp + "&#8457" + "</strong>" + "</li>" + "<br>" + "<li>Humidity: " + "<strong>" + humidity + "%" + "</strong>" + "</li>" + "<br>" + "<li>Wind Speed: " + "<strong>" + wind_speed + " MPH" + "</strong>" + "</li>" + "<br>" + "<li>UV Index: " + "<strong>" + uvi + "</strong>" + "</li>" + "<div>" + "<img src=" + "https://openweathermap.org/img/wn/" + data.current.weather[0].icon + "@2x.png>" + "</div>";
+          
+
           dailyWeather = data.daily[0]; 
           tempOne = data.daily[0].temp.day;
           humidityOne= data.daily[0].humidity
           uviOne = data.daily[0].uvi 
           console.log(humidityOne, tempOne, uviOne)
           forecastResults = document.querySelector('#dayOne');
-          forecastResults.innerHTML = "<h3>Date: " + "</h3>" + "<br>" + "<p>Temp: " + tempOne + "&#8457" + "</p>" + "<p>Humidity: " + humidityOne + "%" + "</p>" +  "<p>UV Index: " + uviOne + "</p>" ;                                 
+          forecastResults.innerHTML = "<h3>Day 1:" + "</h3>" + "<br>" + "<p>Temp: " + tempOne + "&#8457" + "</p>" + "<p>Humidity: " + humidityOne + "%" + "</p>" +  "<p>UV Index: " + uviOne + "</p>" ;                                 
         
           forecast = data.daily[1];
           tempTwo = data.daily[1].temp.day;
@@ -70,7 +70,7 @@ function getWeatherOnSubmit(event) {
           uviTwo = data.daily[1].uvi;
           console.log(humidityTwo, tempTwo, uviTwo)
           forecastResults = document.querySelector('#daytwo');
-          dayTwo.innerHTML = "<h3>Date: " + "</h3>" + "<br>" + "<p>Temp: " + tempTwo + "&#8457" + "</p>" + "<p>Humidity: " + humidityTwo + "%" + "</p>" + "<p>UV Index: " + uviTwo + "</p>" ;                                 
+          dayTwo.innerHTML = "<h3>Day 2:" + "</h3>" + "<br>" + "<p>Temp: " + tempTwo + "&#8457" + "</p>" + "<p>Humidity: " + humidityTwo + "%" + "</p>" + "<p>UV Index: " + uviTwo + "</p>" ;                                 
         
           forecastTwo = data.daily[2];
           tempThree = data.daily[2].temp.day;
@@ -78,7 +78,7 @@ function getWeatherOnSubmit(event) {
           uviThree = data.daily[2].uvi;
           console.log(humidityThree, tempThree, uviThree);
           forecastResults = document.querySelector('#dayThree');
-          forecastResults.innerHTML = "<h3>Date: " + "</h3>" + "<br>" + "<p>Temp: " + tempThree + "&#8457" + "</p>" + "<p>Humidity: " + humidityThree + "%" + "</p>" + "<p>UV Index: " + uviThree + "</p>" ;                                 
+          forecastResults.innerHTML = "<h3>Day 3:" + "</h3>" + "<br>" + "<p>Temp: " + tempThree + "&#8457" + "</p>" + "<p>Humidity: " + humidityThree + "%" + "</p>" + "<p>UV Index: " + uviThree + "</p>" ;                                 
         
           forecastThree = data.daily[3];
           tempFour = data.daily[3].temp.day;
@@ -86,7 +86,7 @@ function getWeatherOnSubmit(event) {
           uviFour = data.daily[3].uvi; 
           console.log(humidityFour, tempFour, uviFour);
           forecastResults = document.querySelector('#dayFour');
-          forecastResults.innerHTML =  forecastResults.innerHTML = "<h3>Date: " + "</h3>" + "<br>" + "<p>Temp: " + tempFour + "&#8457" + "</p>" + "<p>Humidity: " + humidityFour + "%" + "</p>" + "<p>UV Index: " + uviFour + "</p>" ;
+          forecastResults.innerHTML =  forecastResults.innerHTML = "<h3>Day 4:" + "</h3>" + "<br>" + "<p>Temp: " + tempFour + "&#8457" + "</p>" + "<p>Humidity: " + humidityFour + "%" + "</p>" + "<p>UV Index: " + uviFour + "</p>" ;
 
           forecastFour = data.daily[4];
           tempFive = data.daily[4].temp.day;
@@ -94,30 +94,33 @@ function getWeatherOnSubmit(event) {
           uviFive = data.daily[4].uvi; 
           console.log (humidityFive, tempFive, uviFive);
           forecastResults = document.querySelector('#dayFive');
-          forecastResults.innerHTML =  forecastResults.innerHTML = "<h3>Date: " + "</h3>" + "<br>" + "<p>Temp: " + tempFive + "&#8457" + "</p>" + "<p>Humidity: " + humidityFive + "%" + "</p>" + "<p>UV Index: " + uviFive + "</p>" ;
-        
-        })  
+          forecastResults.innerHTML =  forecastResults.innerHTML = "<h3>Day 5: " + "</h3>" + "<br>" + "<p>Temp: " + tempFive + "&#8457" + "</p>" + "<p>Humidity: " + humidityFive + "%" + "</p>" + "<p>UV Index: " + uviFive + "</p>";
+            
+        });
+            
 
-        
-       
-                 
     });
 
-       
+  //   function displayWeatherIconOnSubmit () {
 
-        
-            //   var weatherIcon =icon[0];
-            // weatherIcon.append(weatherIcon)
-            // var weather = document.querySelector("#weather-icon")
-            // weather = data.current.weather[0];
-            // var weatherIcon = data.weather.id().description.icon;
-            // var iconImage = "http://openweathermap.org/img/wn/" + weatherIcon + "@2x.png";
-            // var imgData = iconImage;
-            // imgData.append(iconImage);
+  //   var cityInputVal = document.querySelector('#city-input').value;
+  //     //connnect to open weather API five day forecast. cityInput as value.
+  //   var openWeatherIcon = "api.openweathermap.org/data/2.5/weather?q=" + cityInputVal + "&units=imperial" + "&appid=" + "b0ff6d197a40a5f8e42c9a3871298d52";
 
+  //       openWeatherIcon = "http://openweathermap.org/img/wn/10d@2x.png
 
+  //   openWeatherApi = openWeatherApi + '&q=' + cityInputVal;
 
+  //   fetch(openWeatherApi)
+  //   .then(function (response) {
+  //     console.log(response)
+  //     return response.json();
+  //   });
+  //   
 
-}              
+  // }
+
+  //   weatherIcon.addEventListener('submit', displayWeatherIconOnSubmit);            
+}
 
 searchFormEl.addEventListener('submit', getWeatherOnSubmit);
