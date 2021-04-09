@@ -6,7 +6,7 @@
 
 body {
 font-family: Arial, Helvetica, sans-serif;
-background-color:rgb(212, 212, 212);
+  background-color: #f1f1f1;
 flex-direction: column;
 min-height: 100vh; 
 min-width: 100vh;
@@ -55,7 +55,7 @@ text-align: left;
   display: flex;
   flex-wrap: wrap;
   text-align: left;
-  background-color: #f1f1f1;
+  background-color:rgb(212, 212, 212);
   padding: 25px;
   border: 1px solid black;
   min-height: 45vh;
@@ -64,6 +64,11 @@ text-align: left;
   margin-left: 30px;
   max-width: 128vh;
 
+}
+
+#back-ground {
+  background-color: red;
+  color: white;
 }
 
 span {
@@ -96,8 +101,7 @@ h2:last-child {
  margin-bottom: 5px;
  padding-left: 10px;
  margin-left: 20px;
- background-color: #f1f1f1;
-
+ background-color:rgb(212, 212, 212);
 }
 
 
