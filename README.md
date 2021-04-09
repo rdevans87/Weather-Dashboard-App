@@ -2,11 +2,19 @@
 
 ## Coder Story
 
-This application features a weather dashboard that runs in the browser and was created using dynamically updated HTML and CSS with Javascript to access server-side APIs and retrieve data which is saved in local storage and apppended through the DOM and displayed on my dashboard, which remains saved when the browser is refreshed.
+This application features a weather dashboard that runs in the browser and contains a variety of features and robust search capabilities, displaying precise data and up to date weather conditions for over 200 cities across the United States. Bootstrap was used to build the primary front-end frame work with additional HTML and CSS properties added for a more personalized style and responsive design. This app relies heavily on Javascript methods and principles to provide the essential functionality outlined in the acceptance criteria.  
 
-I used the [OpenWeather API](https://openweathermap.org/api) to retrieve weather data for cities. I used `localStorage` to store specific parameters of my search, which I attempted to append onto my own page. I used a fetch call to gather the search criteria with an API key provided by the site and stored the data in local storage.  
+In addition, this app required data requests from two different server-side APIs in order to obtain the accurate weather conditions and icon representations needed to include with both current and future conditions. 
 
-METHOD USED: 
+WEBSITE:
+[OpenWeather API](https://openweathermap.org/api)
+
+APIs:
+[Current Weather Data](https://openweathermap.org/current) 
+
+to call the current weather from the search Input append the data st cities. I used `localStorage` to store specific parameters of my search, which I attempted to append onto my own page. I used a fetch call to gather the search criteria with an API key provided by the site and stored the data in local storage.  
+
+
 
 
 

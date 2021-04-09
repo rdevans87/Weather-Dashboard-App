@@ -6,24 +6,12 @@ var backButtonEl = document.getElementById("#back-button");
 var forecastResults = document.querySelector("#forecast-results")
 var weatherIcon = document.querySelector("#weather-icon")
 
-// var citySearchList = [];
-//   citySearchList = localStorage.getItem(".list-group-item")
-// if (!savedCities) {
-// citySearchList = localStorage.setItem(".list-group-item")
-// for (var i = 0; i < city.length; i++) {
-//   // city[i] = localStorage.setItem("city", city);
-//   citySearchList = cityInputVal;
-//   document.getElementById("city1").innerHTML = city.toString(i);
-//   // citySearchList = localStorage.getItem(city);
-//   if (cityInputVal !== null)
-//   console.log(cityInputVal)
-// }
+
 
 function getWeatherOnSubmit(event) {
   event.preventDefault();
 
   var cityInputVal = document.querySelector('#city-input').value;
-  // savedCities.push(cityInputVal);
   //check to see if input is more than want to have saved in resultList
   //saved cities.length? if this is over a certain length. take off value. remove the first/oldest searched. if over list then remove index 0
 
@@ -41,29 +29,51 @@ function getWeatherOnSubmit(event) {
     })
     .then(function (data) {
       console.log(data)
-      var city = cityInputVal;
+      cityInputVal = city;
       console.log(city);
-      citySearchList = localStorage.getItem(".list-group-item")
-      
-      for (var i = 0; i < city.length; i++) {
-      // city[i] = localStorage.setItem("city", city);
-      citySearchList = cityInputVal;
+      var city = cityInputVal 
+      var citySearchList = []
+      citySearchList = document.querySelector(".list-group-item")
 
-      if (!citySearchList) {
-        citySearchList = localStorage.setItem(".list-group-item")
-        } else {
-          savedCities.push(cityInputVal);
-        }
-      // document.getElementById("city1").innerHTML = city.toString(i);
-      // citySearchList = localStorage.getItem(city);
-      if (citySearchList !== null){
-      console.log(cityInputVal)
+      if ( cityInputVal !== null) {
+        console.log(cityInputVal)
+        document.getElementById("city1").innerHTML = cityInputVal 
       } 
-      // document.getElementById("city2").innerHTML = cityInputVal.push(city[1]);
+    
+      for (var i = 0; i < citySearchList.length; i++) {
+        citySearchlist[i] = document.querySelectorAll(".list-group-item");
+        document.getElementById("city2").innerHTML = cityInputVal
+        cityInputVal = localStorage.setItem(".list-group-item");
+        
+        if (!cityInputVal) {
+          return;   
+        } else {
+          citySearchList = localStorage.getItem(city);
+          document.getElementById("city3").push(cityInputVal);
+          
+        }
+      
+        var city = cityInputVal;
+        console.log(city);
+        for (var i = 0; i < city.length; i++) {
+        city[i] = localStorage.setItem("city", city);
+        var citySearchList = document.querySelector(".list-group-item");
+        citySearchList.append(city);
+        document.getElementById("city1").innerHTML = city.toString(i);
+        searchOne = localStorage.getItem("city");
+      
+      
+        // 
+      // 
+      
+      //
       // cityInputVal.append(citySearchList) = city.toString(i);
       
       // if (citySearchList !== "city2")
       // document.getElementById("city3").append(citySearchList) = cityInputVal.toString(i);
+     
+
+                
      
       }     
          //use cityInput coordinates from forecast to apply Onecall Api for current weather and UV index. UV Index API deprecated on 04/01/2020.
@@ -87,7 +97,7 @@ function getWeatherOnSubmit(event) {
           weatherIcon = data.current.weather[0].icon;
           console.log(uvi, temp, humidity, wind_speed, currentWeather, weatherIcon);
          resultContent = document.querySelector('#result-content');
-         resultContent.innerHTML = "<h2>City: " + city.toUpperCase(city) + "</h2>" + "<div>" + "<img src=" + "https://openweathermap.org/img/wn/" + weatherIcon + "@2x.png>" + "</div>" + "<br>" + "<p>Forecast: " + "<strong>" + currentWeather + "</strong>" + "</p>" + "<li>Temperature: " + "<strong>" +
+         resultContent.innerHTML = "<h2>City: " + cityInputVal.toUpperCase(city) + "</h2>" + "<div>" + "<img src=" + "https://openweathermap.org/img/wn/" + weatherIcon + "@2x.png>" + "</div>" + "<br>" + "<p>Forecast: " + "<strong>" + currentWeather + "</strong>" + "</p>" + "<li>Temperature: " + "<strong>" +
           temp + "&#8457" + "</strong>" + "</li>" + "<br>" + "<li>Humidity: " + "<strong>" + humidity + "%" + "</strong>" + "</li>" + "<br>" + "<li>Wind Speed: " + "<strong>" + wind_speed + " MPH" + "</strong>" + "</li>" + "<br>" + "<li>UV Index: " + "<strong>" + uvi + "</strong>" + "</li>";
         
 
@@ -141,26 +151,7 @@ function getWeatherOnSubmit(event) {
 
     });
 
-  //   function displayWeatherIconOnSubmit () {
-
-  //   var cityInputVal = document.querySelector('#list-group-item').value;
-  //     //connnect to open weather API five day forecast. cityInput as value.
-  //   var openWeatherIcon = "api.openweathermap.org/data/2.5/weather?q=" + cityInputVal + "&units=imperial" + "&appid=" + "b0ff6d197a40a5f8e42c9a3871298d52";
-
-  //       openWeatherIcon = "http://openweathermap.org/img/wn/10d@2x.png
-
-  //   openWeatherApi = openWeatherApi + '&q=' + cityInputVal;
-
-  //   fetch(openWeatherApi)
-  //   .then(function (response) {
-  //     console.log(response)
-  //     return response.json();
-  //   });
-  //   
-
-  // }
-
-  //   weatherIcon.addEventListener('click', displayWeatherIconOnSubmit);            
+              
 }
 
 searchFormEl.addEventListener('submit', getWeatherOnSubmit);
