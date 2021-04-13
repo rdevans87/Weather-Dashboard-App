@@ -15,8 +15,6 @@ function getWeatherOnSubmit(event) {
   //check to see if input is more than want to have saved in resultList
   //saved cities.length? if this is over a certain length. take off value. remove the first/oldest searched. if over list then remove index 0
 
-
-
   //connnect to open weather API five day forecast. cityInput as value.
   var openWeatherApi = "https://api.openweathermap.org/data/2.5/forecast?q=" + cityInputVal + "&units=imperial" + "&appid=" + "b0ff6d197a40a5f8e42c9a3871298d52";
 
@@ -29,55 +27,20 @@ function getWeatherOnSubmit(event) {
     })
     .then(function (data) {
       console.log(data)
-      cityInputVal = city;
+      var city = cityInputVal;
       console.log(city);
-      var city = cityInputVal 
-      var citySearchList = []
-      citySearchList = document.querySelector(".list-group-item")
+      for (var i = 0; i < city.length; i++) {
+      city[i] = localStorage.setItem("city", city);
+      var citySearchList = document.querySelector(".list-group-item");
+      citySearchList.append(city);
+      document.getElementById("city1").innerHTML = city.toString(i);
+      searchOne = localStorage.getItem("city");
 
-      if ( cityInputVal !== null) {
-        console.log(cityInputVal)
-        document.getElementById("city1").innerHTML = cityInputVal 
-      } 
-    
-      for (var i = 0; i < citySearchList.length; i++) {
-        citySearchlist[i] = document.querySelectorAll(".list-group-item");
-        document.getElementById("city2").innerHTML = cityInputVal
-        cityInputVal = localStorage.setItem(".list-group-item");
-        
-        if (!cityInputVal) {
-          return;   
-        } else {
-          citySearchList = localStorage.getItem(city);
-          document.getElementById("city3").push(cityInputVal);
-          
-        }
-      
-        var city = cityInputVal;
-        console.log(city);
-        for (var i = 0; i < city.length; i++) {
-        city[i] = localStorage.setItem("city", city);
-        var citySearchList = document.querySelector(".list-group-item");
-        citySearchList.append(city);
-        document.getElementById("city1").innerHTML = city.toString(i);
-        searchOne = localStorage.getItem("city");
-      
-      
-        // 
-      // 
-      
-      //
-      // cityInputVal.append(citySearchList) = city.toString(i);
-      
-      // if (citySearchList !== "city2")
-      // document.getElementById("city3").append(citySearchList) = cityInputVal.toString(i);
-     
-
+      }     
                 
      
-      }     
          //use cityInput coordinates from forecast to apply Onecall Api for current weather and UV index. UV Index API deprecated on 04/01/2020.
-          var apiOneCall = "https://api.openweathermap.org/data/2.5/onecall?" + "lat=" + data.city.coord.lat + "&lon=" + data.city.coord.lon + "&units=imperial" + "&appid=" + "b0ff6d197a40a5f8e42c9a3871298d52";
+       var apiOneCall = "https://api.openweathermap.org/data/2.5/onecall?" + "lat=" + data.city.coord.lat + "&lon=" + data.city.coord.lon + "&units=imperial" + "&appid=" + "b0ff6d197a40a5f8e42c9a3871298d52";
           
        
         fetch(apiOneCall)
