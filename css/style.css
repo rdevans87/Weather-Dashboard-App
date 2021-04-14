@@ -104,7 +104,9 @@ h2:last-child {
  background-color:rgb(212, 212, 212);
 }
 
-
+ #uvi {
+   background-color: red;
+ }
 
 #sidebar {
 float: left;

@@ -7,13 +7,16 @@ This application features a weather dashboard that runs in the browser and conta
 In addition, this app required data requests from two different server-side APIs in order to obtain the accurate weather conditions and icon representations needed for both current and future conditions. [OpenWeather API](https://openweathermap.org/api) is a team of IT experts and data scientists that has been practiscing deep weather data science since 2014. For each point on the globe, OpenWeather provides historical, current and forecasted weather data via light-speed APIs.
 
 APIs USED:
+
 [Current Weather Data](https://openweathermap.org/current) 
 
+[One Call](https://openweathermap.org/api/one-call-api) 
 
-[One CAll ](https://openweathermap.org/api/one-call-api) 
+
+The Current Weather Data API was used as the primary search parameter "By City Name". The user can type any city name and hit "submit" to see the current weather including the specific condtions temperature, humidity, wind speed. The One Call API was used to retriece the UVindex along with the 5 days forecast.
 
 
-The Current Weather Data API was used as the primary search parameter "By City Name". The user can type any city name and hit "submit" to see the current weather include the specific condtion  an ".addEventListener" The information was called successfully with an API ley  ONE  used the Ceto call the current weather from the search Input append the data st cities. I used `localStorage` to store specific parameters of my search, which I attempted to append onto my own page. I used a fetch call to gather the search criteria with an API key provided by the site and stored the data in local storage.  
+I used `localStorage` to store specific parameters of my search,  I used a fetch call to gather the search criteria with an API key provided by the site and stored the data in local storage.  
 
 
 
