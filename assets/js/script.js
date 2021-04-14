@@ -29,13 +29,21 @@ function getWeatherOnSubmit(event) {
       console.log(data)
       var city = cityInputVal;
       console.log(city);
-      for (var i = 5; i < city.length; i++) {
-      city[i] = localStorage.setItem("city", JSON.stringify(city));
-      document.getElementById("city1").innerHTML = city.toString(i);
-      if (!city ) {
-      cityTwo =  document.querySelector("#city2");
-      document.getElementById("city2").innerHTML = cityTwo.toString(i);
-      }
+      for (var i = 0; i < city.length; i++) {
+        city[i] = localStorage.setItem("city", JSON.stringify(city));
+        document.getElementById("city1").innerHTML = city.toString(i);
+        var cityTwo = city[i]
+        if (cityTwo !== city ) {
+        city[i] = localStorage.setItem("city2", JSON.stringify(cityTwo));
+        document.getElementById("city2").append(cityTwo);
+          
+        }
+       
+        
+      // if (city === city ) {
+      // cityTwo =  document.querySelector("#city2");
+      // document.getElementById("city2").
+      // }
 
       // if (city === "city1") {
 
@@ -44,8 +52,8 @@ function getWeatherOnSubmit(event) {
      
       // document.getElementById("city2").innerHTML = city.toString(i);
 
-      searchOne = localStorage.getItem("city", "city2", "city3");
-
+      // searchOne = localStorage.getItem("city", "city2", "city3");
+      
     }
 
          //use cityInput coordinates from forecast to apply Onecall Api for current weather and UV index. UV Index API deprecated on 04/01/2020.
