@@ -5,7 +5,7 @@ var resultTextEl = document.querySelector("#result-text");
 var backButtonEl = document.getElementById("#back-button");
 var forecastResults = document.querySelector("#forecast-results")
 var weatherIcon = document.querySelector("#weather-icon")
-
+var cities = []
 
 
 function getWeatherOnSubmit(event) {
@@ -29,15 +29,24 @@ function getWeatherOnSubmit(event) {
       console.log(data)
       var city = cityInputVal;
       console.log(city);
-      for (var i = 0; i < city.length; i++) {
-      city[i] = localStorage.setItem("city", city);
-      var citySearchList = document.querySelector(".list-group-item");
-      citySearchList.append(city);
+      for (var i = 5; i < city.length; i++) {
+      city[i] = localStorage.setItem("city", JSON.stringify(city));
       document.getElementById("city1").innerHTML = city.toString(i);
-      searchOne = localStorage.getItem("city");
+      if (!city ) {
+      cityTwo =  document.querySelector("#city2");
+      document.getElementById("city2").innerHTML = cityTwo.toString(i);
+      }
 
+      // if (city === "city1") {
+
+
+      // } 
      
-  }
+      // document.getElementById("city2").innerHTML = city.toString(i);
+
+      searchOne = localStorage.getItem("city", "city2", "city3");
+
+    }
 
          //use cityInput coordinates from forecast to apply Onecall Api for current weather and UV index. UV Index API deprecated on 04/01/2020.
        var apiOneCall = "https://api.openweathermap.org/data/2.5/onecall?" + "lat=" + data.city.coord.lat + "&lon=" + data.city.coord.lon + "&units=imperial" + "&appid=" + "b0ff6d197a40a5f8e42c9a3871298d52";
