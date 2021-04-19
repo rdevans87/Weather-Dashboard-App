@@ -13,10 +13,7 @@ APIs USED:
 [One Call](https://openweathermap.org/api/one-call-api) 
 
 
-The Current Weather Data API was used as the primary search parameter "By City Name". The user can type any city name and hit "submit" to see the current weather including the specific condtions temperature, humidity, wind speed. The One Call API was used to retriece the UVindex along with the 5 days forecast.
-
-
-I used `localStorage` to store specific parameters of my search,  I used a fetch call to gather the search criteria with an API key provided by the site and stored the data in local storage.  
+The Current Weather Data API was used as the primary search parameter "By City Name". The user can type any city name and hit "submit" to see the current weather including the specific condtions temperature, humidity, wind speed. The One Call API was used to retriece the UVindex along with the 5 days forecast.  `localStorage` to store specific parameters of my search, which are listed below the search bar.  I used a fetch call to gather the search criteria with an API key provided by the site and stored the data in local storage.  
 
 
 
