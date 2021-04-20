@@ -2,7 +2,7 @@
 
 ## Description
 
-This application features a weather dashboard that runs in the browser and contains a variety of features extensive search and data capabilities, displaying precise data and up-to-date weather conditions for over 200,000 cities across the United States. Bootstrap was used to build the primary front-end framework with additional HTML and CSS properties added for a more responsive design. This app relies heavily on Javascript methods and principles to provide the essential functionality outlined in the acceptance criteria.  
+This application features a weather dashboard that runs in the browser and contains extensive search capabilities, displaying precise data and up-to-date weather conditions for over 200,000 cities across the United States. Bootstrap was used to build the primary front-end framework with additional HTML and CSS properties added for a more responsive design. This app relies heavily on Javascript methods and principles to provide the essential functionality outlined in the acceptance criteria.  
 
 In addition, this app required data requests from two different server-side APIs in order to obtain the accurate weather conditions and icon representations needed for both current and future conditions. [OpenWeather API](https://openweathermap.org/api) is a team of IT experts and data scientists that has been practiscing deep weather data science since 2014. For each point on the globe, OpenWeather provides historical, current and forecasted weather data via light-speed APIs.
 
@@ -10,7 +10,7 @@ APIs USED:
 
 [Current Weather Data](https://openweathermap.org/current) 
 
-City, Date 
+City, Date
 Icon-image
 Temperature
 Humidity
@@ -19,13 +19,13 @@ Wind Speed
 
 [One Call](https://openweathermap.org/api/one-call-api) 
 
-Date
+City, Dates
 Icon image
 Temperature
 Humidity
 UV index
 
-The Current Weather Data API was used as the primary search parameter "By City Name". The user can type any city name and hit "submit" to see the current weather including the specific conditions temperature, humidity, wind speed. The One Call API was used to retrieve the UVindex along with the 5 day forecast. The search items were saved in  `localStorage` , and listed in the sidebar for a selectable search history. In addition, I created a button linked to OpenWeather's Website to locate other relevent weather data. I've also include a standard timeInveral representing accruate current time of day ('h:mm:ss a');
+The Current Weather Data API was used as the primary search parameter "By City Name". The user can type any city name and hit "submit" to see the current weather including the specific conditions temperature, humidity, wind speed. The One Call API was used to retrieve the UVindex along with the 5 day forecast and corresponding weather conditions. Searches are saved in  `localStorage` , then listed in the search history beneath the search bar. In addition, I created a button linked to OpenWeather's Website for users to reference other relevent weather data. I've also included a standard timeInterval representing accurate hours of the day ('h:mm:ss a'); for 
 
 ## Challenges
 I ran into significant issues saving my search history in local storage and append it to a list.
