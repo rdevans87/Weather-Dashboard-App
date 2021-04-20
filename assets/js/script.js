@@ -3,22 +3,22 @@ var searchFormEl = document.querySelector('#search-form')
 var backButtonEl = document.getElementById("#back-button");
 var forecastResults = document.querySelector("#forecast-results");
 var weatherIcon = document.querySelector("#weather-icon");
-var citySearch  = []
+var citySearch = []
 var cities = []
 
 
 
 var currentDayEl = $("#currentDay"); function displayTime() {
   var rightNow = moment().format('h:mm:ss a');
-   currentDayEl.text(rightNow);
+  currentDayEl.text(rightNow);
 
-};      
-    
+};
+
 function getWeatherOnSubmit(event) {
   event.preventDefault();
-  
+
   var cityInputVal = document.querySelector('#city-input').value;
- 
+
 
   //connnect to open weather API five day forecast. cityInput as value.
   var openWeatherApi = "https://api.openweathermap.org/data/2.5/forecast?q=" + cityInputVal + "&units=imperial" + "&appid=" + "b0ff6d197a40a5f8e42c9a3871298d52";
@@ -36,42 +36,12 @@ function getWeatherOnSubmit(event) {
       console.log(city)
       window.localStorage.setItem(city, city)
       var cities = document.querySelector("#city-search-list")
-      cities.innerHTML = "<button class=" + 'list-group-item' + "id='city1'>" + city + "</button>" + "<button class=" + 'list-group-item' + "id='city1'>" + "Cleveland" + "</button>" +  "<button class=" + 'list-group-item' + "id='city3'>" + "Miami" + "</button>" +  "<button class=" + 'list-group-item' + "id='city4'>" + "Los Angeles" + "</button>";
-
-      
-   
+      cities.innerHTML = "<button class=" + 'list-group-item' + "id='city1'>" + city + "</button>" + "<button class=" + 'list-group-item' + "id='city1'>" + "Cleveland" + "</button>" + "<button class=" + 'list-group-item' + "id='city3'>" + "Miami" + "</button>" + "<button class=" + 'list-group-item' + "id='city4'>" + "Los Angeles" + "</button>";
 
       //undable to apply getItem to append citys into list
-      
-      // if (city) {
-      // cities = city[i].push();
-      // window.localStorage.getItem(city); 
-      // var cityOne = document.querySelector("city2").innerHTML = 
-      // var cityTwo = cityOne++
-      // cityTwo = document.querySelector("city3").innerHTML=  "<button class=" + 'list-group-item' + "id='city2'>" + city[1] + "</button>" ;
-
-      // }
-
       // for (var i = 0; i < city.length; i++) {
-       
       // }
-      
-     
-       
-         
-      // cityInputVal = document.querySelector('#city-input').value;
-      
-      // cityInputVal = document.querySelector("#city-search-list")
-      // var cities = city.value
-      // var citySearch = document.createElement("button").classList.add(".list-group-item")
-      // citySearch.innerHTML = "<button>" + city + "</button>";
-      // cities = city++;
-     
-        // var cities = city++; 
-         //
-      
 
-     
 
       //use cityInput coordinates from forecast to apply Onecall Api for current weather and UV index. UV Index API deprecated on 04/01/2020.
       var apiOneCall = "https://api.openweathermap.org/data/2.5/onecall?" + "lat=" + data.city.coord.lat + "&lon=" + data.city.coord.lon + "&units=imperial" + "&appid=" + "b0ff6d197a40a5f8e42c9a3871298d52";
@@ -148,19 +118,12 @@ function getWeatherOnSubmit(event) {
           forecastResults = document.querySelector('#dayFive');
           forecastResults.innerHTML = "<h3>" + dailyFive + "</h3>" + "<div>" + "<img src=" + "https://openweathermap.org/img/wn/" + weatherFive + "@2x.png>" + "</div>" + "<p>Temp: " + tempFive + "&#8457" + "</p>" + "<p>Humidity: " + humidityFive + "%" + "</p>" + "<p>UV Index: " + uviFive + "</p>";
 
-         
+
 
 
         });
 
-       
-        
-      
-    
     });
-      
-      
-   
 
 };
 
