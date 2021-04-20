@@ -25,7 +25,7 @@ Temperature
 Humidity
 UV index
 
-The Current Weather Data API was used as the primary search parameter "By City Name". The user can type any city name and hit "submit" to see the current weather including the specific conditions temperature, humidity, wind speed. The One Call API was used to retrieve the UVindex along with the 5 day forecast and corresponding weather conditions. Searches are saved in  `localStorage` , then listed in the search history beneath the search bar. In addition, I created a button linked to OpenWeather's Website for users to reference other relevent weather data. I've also included a standard timeInterval representing accurate hours of the day ('h:mm:ss a'); for 
+The Current Weather Data API was used as the primary search parameter "By City Name". The user can type any city name and hit "submit" to see the current weather including the specific conditions temperature, humidity, wind speed. The One Call API was used to retrieve the UVindex along with the 5 day forecast and corresponding weather conditions. Searches are saved in  `localStorage` , then listed in the search history beneath the search bar. In addition, I created a button linked to OpenWeather's Website for users to reference other relevent weather data. I've also included a standard time Interval representing accurate hours of the day ('h:mm:ss a'); 
 
 ## Challenges
 I ran into significant issues saving my search history in local storage and append it to a list.
