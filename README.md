@@ -61,7 +61,8 @@ THEN I am again presented with current and future conditions for that city
 
 The following images shows the web application's appearance and functionality:
 
-[Empty Dashboard](images/WeatherDashOne.png) 
+
+Empty Dashboard (https://user-images.githubusercontent.com/74195719/115355308-8ab9f900-a188-11eb-9046-575388500354.png)
 
 [Populated Dashboard](images/WeatherDashboardscreenshot.png) 
 
