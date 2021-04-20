@@ -6,6 +6,8 @@ This application features a weather dashboard that runs in the browser and conta
 
 In addition, this app required data requests from two different server-side APIs in order to obtain the accurate weather conditions and icon representations needed for both current and future conditions. [OpenWeather API](https://openweathermap.org/api) is a team of IT experts and data scientists that has been practiscing deep weather data science since 2014. For each point on the globe, OpenWeather provides historical, current and forecasted weather data via light-speed APIs.
 
+['Deployed URL: GitHub IO'](https://rdevans87.github.io/Weather-Dashboard-March-6-2021/)
+
 APIs USED:
 
 [Current Weather Data](https://openweathermap.org/current) 
