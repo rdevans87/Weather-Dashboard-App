@@ -27,9 +27,9 @@ UV index
 
 The Current Weather Data API was used as the primary search parameter "By City Name". The user can type any city name and hit "submit" to see the current weather including the specific conditions temperature, humidity, wind speed. The One Call API was used to retrieve the UVindex along with the 5 day forecast. The search items were saved in  `localStorage` , and listed in the sidebar for a selectable search history. In addition, I created a button linked to OpenWeather's Website to locate other relevent weather data. I've also include a standard timeInveral representing accruate current time of day ('h:mm:ss a');
 
-## Challenges 
-I can into significant issues saving my search history in local storage
-I wa unable to recall the search to recall previous search history
+## Challenges
+I ran into significant issues saving my search history in local storage and append it to a list.
+I was unable to recall previous search history because  would not save to the page.
 I was unable to set a color that indicates whether the conditions are favorable, moderate, or severe.
 
 
@@ -61,16 +61,11 @@ THEN I am again presented with current and future conditions for that city
 
 The following images shows the web application's appearance and functionality:
 
+Empty Dashboard 
 ![image](https://user-images.githubusercontent.com/74195719/115356454-ad004680-a189-11eb-9444-c754d37ccdc7.png)
 
-
-Empty Dashboard 
-
-
-
-[Populated Dashboard](images/WeatherDashboardscreenshot.png) 
-
-
+[Populated Dashboard]
+![image](https://user-images.githubusercontent.com/74195719/115356719-efc21e80-a189-11eb-8eab-96f974b90bff.png)
 
 
 ## Grading Requirements
