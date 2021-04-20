@@ -61,10 +61,12 @@ THEN I am again presented with current and future conditions for that city
 
 The following images shows the web application's appearance and functionality:
 
+![image](https://user-images.githubusercontent.com/74195719/115356454-ad004680-a189-11eb-9444-c754d37ccdc7.png)
+
 
 Empty Dashboard 
 
-(https://user-images.githubusercontent.com/74195719/115355308-8ab9f900-a188-11eb-9046-575388500354.png)
+
 
 [Populated Dashboard](images/WeatherDashboardscreenshot.png) 
 
