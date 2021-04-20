@@ -1,7 +1,5 @@
 var resultContent = document.querySelector('#result-content');
-var searchFormEl = document.querySelector('#search-form');
-var resultListEl = document.getElementById("#result-list");
-var resultTextEl = document.querySelector("#result-text");
+var searchFormEl = document.querySelector('#search-form')
 var backButtonEl = document.getElementById("#back-button");
 var forecastResults = document.querySelector("#forecast-results");
 var weatherIcon = document.querySelector("#weather-icon");
@@ -9,6 +7,13 @@ var citySearch  = []
 var cities = []
 
 
+
+var currentDayEl = $("#currentDay"); function displayTime() {
+  var rightNow = moment().format('h:mm:ss a');
+   currentDayEl.text(rightNow);
+
+};      
+    
 function getWeatherOnSubmit(event) {
   event.preventDefault();
   
@@ -29,11 +34,30 @@ function getWeatherOnSubmit(event) {
       console.log(data)
       var city = cityInputVal
       console.log(city)
-      window.localStorage.setItem("city", city)
+      window.localStorage.setItem(city, city)
       var cities = document.querySelector("#city-search-list")
-      cities.innerHTML = "<button class=" + 'list-group-item' + "id='city1'>" + city + "</button>";
-      cities = city++;
-           
+      cities.innerHTML = "<button class=" + 'list-group-item' + "id='city1'>" + city + "</button>" + "<button class=" + 'list-group-item' + "id='city1'>" + "Cleveland" + "</button>" +  "<button class=" + 'list-group-item' + "id='city3'>" + "Miami" + "</button>" +  "<button class=" + 'list-group-item' + "id='city4'>" + "Los Angeles" + "</button>";
+
+      
+   
+
+      //undable to apply getItem to append citys into list
+      
+      // if (city) {
+      // cities = city[i].push();
+      // window.localStorage.getItem(city); 
+      // var cityOne = document.querySelector("city2").innerHTML = 
+      // var cityTwo = cityOne++
+      // cityTwo = document.querySelector("city3").innerHTML=  "<button class=" + 'list-group-item' + "id='city2'>" + city[1] + "</button>" ;
+
+      // }
+
+      // for (var i = 0; i < city.length; i++) {
+       
+      // }
+      
+     
+       
          
       // cityInputVal = document.querySelector('#city-input').value;
       
@@ -44,7 +68,7 @@ function getWeatherOnSubmit(event) {
       // cities = city++;
      
         // var cities = city++; 
-         // document.querySelector(".list-group-item").append(city)
+         //
       
 
      
@@ -136,8 +160,10 @@ function getWeatherOnSubmit(event) {
     });
       
       
-      
+   
 
-}
+};
+
+setInterval(displayTime, 1000);
 
 searchFormEl.addEventListener('submit', getWeatherOnSubmit);

@@ -19,6 +19,7 @@ text-align: center;
 padding: 20px;
 color: white;
 max-width:100%;
+margin-left: 50px;
 
 }
 
@@ -86,6 +87,10 @@ h2:last-child {
   font-size: 30px;
 }
 
+#currentDay {
+  font-size:25px;
+  font-weight: bold;
+}
 
 
 
@@ -115,7 +120,7 @@ padding-left: 20px;
 padding-right: 20px;
 background-color:  #093a6e;
 margin-right: 20px;
-min-height: 80vh;
+min-height: 90vh;
 padding-bottom: 30px;
 
 }
