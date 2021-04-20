@@ -2,7 +2,7 @@
 
 ## Description
 
-This application features a weather dashboard that runs in the browser and contains a variety of features and robust search capabilities, displaying precise data and up-to-date weather conditions for over 200,000 cities across the United States. Bootstrap was used to build the primary front-end framework with additional HTML and CSS properties added for a more responsive design. This app relies heavily on Javascript methods and principles to provide the essential functionality outlined in the acceptance criteria.  
+This application features a weather dashboard that runs in the browser and contains a variety of features extensive search and data capabilities, displaying precise data and up-to-date weather conditions for over 200,000 cities across the United States. Bootstrap was used to build the primary front-end framework with additional HTML and CSS properties added for a more responsive design. This app relies heavily on Javascript methods and principles to provide the essential functionality outlined in the acceptance criteria.  
 
 In addition, this app required data requests from two different server-side APIs in order to obtain the accurate weather conditions and icon representations needed for both current and future conditions. [OpenWeather API](https://openweathermap.org/api) is a team of IT experts and data scientists that has been practiscing deep weather data science since 2014. For each point on the globe, OpenWeather provides historical, current and forecasted weather data via light-speed APIs.
 
