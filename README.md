@@ -86,3 +86,13 @@ Empty Dashboard
 ## Review
 
 
+## Questions
+ 
+ Email: <a href="mailto:rdevans87@gmail.com">rdevans87@gmail.com</a>
+
+ Github: <a href="https://github.com/rdevans87">rdevans87</a>
+
+
+[LICENSE FROM MIT](/Users/ryanevans/ORM-ECommerce-BackEnd/LICENSE)
+
+
