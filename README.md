@@ -1,4 +1,4 @@
- # 06 Server-Side APIs: Weather Dashboard
+ # Server-Side APIs: Weather Dashboard
 
 ## Description
 
@@ -31,12 +31,6 @@ Humidity
 UV index
 
 The Current Weather Data API was used as the primary search parameter "By City Name". The user can type any city name and hit "submit" to see the current weather including the specific conditions temperature, humidity, wind speed. The One Call API was used to retrieve the UV index along with the 5 day forecast and corresponding weather conditions. Searches are saved in  `localStorage` , then listed in the search history beneath the search bar. In addition, I created a button linked to OpenWeather's Website for users to reference other relevent weather data. I've also included a standard time Interval representing accurate hours of the day ('h:mm:ss a'); 
-
-## Challenges
-I ran into significant issues saving my search history in local storage and appending it to a list.
-I was unable to recall my previous search history because it would always seem to effect my API call.
-I was unable to set a color that indicates whether the conditions are favorable, moderate, or severe.
-
 
 ## User Story
 
@@ -71,20 +65,6 @@ Empty Dashboard
 
 [Populated Dashboard]
 ![image](https://user-images.githubusercontent.com/74195719/115356719-efc21e80-a189-11eb-8eab-96f974b90bff.png)
-
-
-## Grading Requirements
-
-### Technical Acceptance Criteria: 40%
-
-### Deployment: 32%
-
-### Application Quality: 15%
-
-### Repository Quality: 13%
-
-## Review
-
 
 ## Questions
  
